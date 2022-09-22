@@ -36,6 +36,14 @@ class MainActivity : AppCompatActivity() {
     var p1Round8Score = 0
     var p1Round9Score = 0
 
+    var p1ExtraCard1Value = 0
+    var p1ExtraCard2Value = 0
+    var p1ExtraCard3Value = 0
+
+    var p1ExtraCard1UsedValue = 0
+    var p1ExtraCard2UsedValue = 0
+    var p1ExtraCard3UsedValue = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -63,8 +71,7 @@ class MainActivity : AppCompatActivity() {
 
         p1EndTurnButton.setOnClickListener {
             p1EndTurnButtonPress()
-            p1Score = p1Round1Score + p1Round2Score + p1Round3Score + p1Round4Score + p1Round5Score + p1Round6Score + p1Round7Score + p1Round8Score + p1Round9Score
-            p1ScoreTextView.text = p1Score.toString()
+            calculateScore()
         }
 
         p1StandButton.setOnClickListener{
@@ -72,16 +79,451 @@ class MainActivity : AppCompatActivity() {
         }
 
         p1ExtraCard1ImageButton.setOnClickListener{
-            
+            p1ExtraCard1Value = 3
+            p1ExtraCardImageButtonPressed(p1ExtraCard1Value)
+            p1ExtraCard1Value = 0
+            p1ExtraCard1ImageButton.setEnabled(false)
+            calculateScore()
+        }
+
+        p1ExtraCard2ImageButton.setOnClickListener{
+            p1ExtraCardImageButtonPressed(p1ExtraCard2Value)
+            p1ExtraCard2Value = 0
+            p1ExtraCard1ImageButton.setEnabled(false)
+            calculateScore()
+        }
+
+        p1ExtraCard3ImageButton.setOnClickListener{
+            p1ExtraCardImageButtonPressed(p1ExtraCard3Value)
+            p1ExtraCard3Value = 0
+            p1ExtraCard1ImageButton.setEnabled(false)
+            calculateScore()
         }
 
 
     }
 
+    fun calculateScore(){
+        p1Score = p1Round1Score + p1Round2Score + p1Round3Score + p1Round4Score + p1Round5Score + p1Round6Score + p1Round7Score + p1Round8Score + p1Round9Score + p1ExtraCard1UsedValue + p1ExtraCard2UsedValue + p1ExtraCard3UsedValue
+        p1ScoreTextView.text = p1Score.toString()
+    }
+
     fun p1StandButtonPress(){
          p1EndTurnButton.setEnabled(false)
     }
-    
+
+
+    fun p1ExtraCardImageButtonPressed(cardValue: Int): Int{
+
+        when(p1TurnCount){
+
+
+            1-> {
+                when(cardValue){
+                    1->{
+                        p1CardOneImageView.setImageResource(R.drawable.d1)
+                    }
+                    2->{
+                        p1CardOneImageView.setImageResource(R.drawable.d2)
+                    }
+                    3->{
+                        p1CardOneImageView.setImageResource(R.drawable.d3)
+                    }
+                    4->{
+                        p1CardOneImageView.setImageResource(R.drawable.d4)
+                    }
+                    5->{
+                        p1CardOneImageView.setImageResource(R.drawable.d5)
+                    }
+                    -1->{
+                        p1CardOneImageView.setImageResource(R.drawable.d6)
+                    }
+                    -2->{
+                        p1CardOneImageView.setImageResource(R.drawable.d7)
+                    }
+                    -3->{
+                        p1CardOneImageView.setImageResource(R.drawable.d8)
+                    }
+                    -4->{
+                        p1CardOneImageView.setImageResource(R.drawable.d9)
+                    }
+                    -5->{
+                        p1CardOneImageView.setImageResource(R.drawable.d10)
+                    }
+
+
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+
+
+            }
+
+            2-> {
+                when(cardValue) {
+                    1 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardTwoImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+            }
+
+            3-> {
+                when(cardValue) {
+                    1 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardThreeImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+            }
+
+            4-> {
+                when(cardValue) {
+                    1 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardFourImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+            }
+
+            5-> {
+                when(cardValue) {
+                    1 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardFiveImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+            }
+
+            6-> {
+                when(cardValue) {
+                    1 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardSixImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+            }
+
+            7->{
+                when(cardValue) {
+                    1 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardSevenImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+
+            }
+
+            8->{
+                when(cardValue) {
+                    1 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardEightImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+            }
+
+            9->{
+                when(cardValue) {
+                    1 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d1)
+                    }
+                    2 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d2)
+                    }
+                    3 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d3)
+                    }
+                    4 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d4)
+                    }
+                    5 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d5)
+                    }
+                    6 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d6)
+                    }
+                    7 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d7)
+                    }
+                    8 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d8)
+                    }
+                    9 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d9)
+                    }
+                    10 -> {
+                        p1CardNineImageView.setImageResource(R.drawable.d10)
+                    }
+                }
+                if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
+                    p1ExtraCard1UsedValue = p1ExtraCard1Value
+                }
+                if ((p1ExtraCard2Value < 0) || (p1ExtraCard2Value > 0)){
+                    p1ExtraCard2UsedValue = p1ExtraCard2Value
+                }
+                if ((p1ExtraCard3Value < 0) || (p1ExtraCard3Value > 0)){
+                    p1ExtraCard3UsedValue = p1ExtraCard3Value
+                }
+            }
+        }
+
+        return p1TurnCount++
+    }
+
+
     fun p1EndTurnButtonPress(): Int{
         var cardValue = (1..10).random()
 
