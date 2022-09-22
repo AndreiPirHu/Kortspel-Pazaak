@@ -151,8 +151,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614"
-        app:srcCompat="@drawable/d3" />
+        app:layout_constraintVertical_bias="0.614" />
 
     <ImageButton
         android:id="@+id/p1ExtraCard2ImageButton"
@@ -164,8 +163,7 @@
         app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614"
-        app:srcCompat="@drawable/d3" />
+        app:layout_constraintVertical_bias="0.614" />
 
     <ImageButton
         android:id="@+id/p1ExtraCard3ImageButton"
@@ -176,7 +174,6 @@
         app:layout_constraintHorizontal_bias="0.256"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614"
-        app:srcCompat="@drawable/d3" />
+        app:layout_constraintVertical_bias="0.614" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

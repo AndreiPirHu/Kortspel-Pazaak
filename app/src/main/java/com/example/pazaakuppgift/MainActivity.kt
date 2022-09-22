@@ -1,5 +1,6 @@
 package com.example.pazaakuppgift
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -89,19 +90,22 @@ class MainActivity : AppCompatActivity() {
         p1ExtraCard2ImageButton.setOnClickListener{
             p1ExtraCardImageButtonPressed(p1ExtraCard2Value)
             p1ExtraCard2Value = 0
-            p1ExtraCard1ImageButton.setEnabled(false)
+            p1ExtraCard2ImageButton.setEnabled(false)
             calculateScore()
         }
 
         p1ExtraCard3ImageButton.setOnClickListener{
             p1ExtraCardImageButtonPressed(p1ExtraCard3Value)
             p1ExtraCard3Value = 0
-            p1ExtraCard1ImageButton.setEnabled(false)
+            p1ExtraCard3ImageButton.setEnabled(false)
             calculateScore()
         }
 
 
     }
+
+
+
 
     fun calculateScore(){
         p1Score = p1Round1Score + p1Round2Score + p1Round3Score + p1Round4Score + p1Round5Score + p1Round6Score + p1Round7Score + p1Round8Score + p1Round9Score + p1ExtraCard1UsedValue + p1ExtraCard2UsedValue + p1ExtraCard3UsedValue
@@ -522,6 +526,12 @@ class MainActivity : AppCompatActivity() {
 
         return p1TurnCount++
     }
+
+
+
+
+
+
 
 
     fun p1EndTurnButtonPress(): Int{
