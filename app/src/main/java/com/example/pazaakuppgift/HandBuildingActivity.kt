@@ -3,148 +3,486 @@ package com.example.pazaakuppgift
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import com.google.android.material.appbar.AppBarLayout
 
 
 class HandBuildingActivity : AppCompatActivity() {
 
+     lateinit var p1AvailableExtraCard1ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard2ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard3ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard4ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard5ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard6ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard7ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard8ImageButton: ImageButton
+     lateinit var p1AvailableExtraCard9ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard1ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard2ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard3ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard4ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard5ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard6ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard7ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard8ImageButton: ImageButton
+     lateinit var p2AvailableExtraCard9ImageButton: ImageButton
+
     lateinit var p1ChosenExtraCard1ImageButton: ImageButton
     lateinit var p1ChosenExtraCard2ImageButton: ImageButton
     lateinit var p1ChosenExtraCard3ImageButton: ImageButton
+    lateinit var p2ChosenExtraCard1ImageButton: ImageButton
+    lateinit var p2ChosenExtraCard2ImageButton: ImageButton
+    lateinit var p2ChosenExtraCard3ImageButton: ImageButton
+    lateinit var p1HandBuildingReadyButton: Button
+    lateinit var p2HandBuildingReadyButton: Button
+//    lateinit var readyToStartBlockerAppBar: AppBarLayout
 
     var player1Ready = false
     var player2Ready = false
 
-    var chosenExtraCard1Value = 0
-    var chosenExtraCard2Value = 0
-    var chosenExtraCard3Value = 0
+    var p1ChosenExtraCard1Value = 0
+    var p1ChosenExtraCard2Value = 0
+    var p1ChosenExtraCard3Value = 0
+    var p2ChosenExtraCard1Value = 0
+    var p2ChosenExtraCard2Value = 0
+    var p2ChosenExtraCard3Value = 0
 
-//    var player1Name = intent.getStringExtra("player1Name")
-//    var player2Name = intent.getStringExtra("player2Name")
+    var player1Name = "Player 1"
+    var player2Name = "Player 2"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hand_building)
 
-        var p1AvailableExtraCard1ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard1ImageButton)
-        var p1AvailableExtraCard2ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard2ImageButton)
-        var p1AvailableExtraCard3ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard3ImageButton)
-        var p1AvailableExtraCard4ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard4ImageButton)
-        var p1AvailableExtraCard5ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard5ImageButton)
-        var p1AvailableExtraCard6ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard6ImageButton)
-        var p1AvailableExtraCard7ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard7ImageButton)
-        var p1AvailableExtraCard8ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard8ImageButton)
-        var p1AvailableExtraCard9ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard9ImageButton)
+        p1AvailableExtraCard1ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard1ImageButton)
+        p1AvailableExtraCard2ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard2ImageButton)
+        p1AvailableExtraCard3ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard3ImageButton)
+        p1AvailableExtraCard4ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard4ImageButton)
+        p1AvailableExtraCard5ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard5ImageButton)
+        p1AvailableExtraCard6ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard6ImageButton)
+        p1AvailableExtraCard7ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard7ImageButton)
+        p1AvailableExtraCard8ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard8ImageButton)
+        p1AvailableExtraCard9ImageButton = findViewById<ImageButton>(R.id.p1AvailableExtraCard9ImageButton)
+        p2AvailableExtraCard1ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard1ImageButton)
+        p2AvailableExtraCard2ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard2ImageButton)
+        p2AvailableExtraCard3ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard3ImageButton)
+        p2AvailableExtraCard4ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard4ImageButton)
+        p2AvailableExtraCard5ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard5ImageButton)
+        p2AvailableExtraCard6ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard6ImageButton)
+        p2AvailableExtraCard7ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard7ImageButton)
+        p2AvailableExtraCard8ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard8ImageButton)
+        p2AvailableExtraCard9ImageButton = findViewById<ImageButton>(R.id.p2AvailableExtraCard9ImageButton)
 
-//        var p1HandBuildingReadyButton = findViewById<Button>(R.id.p1HandBuildingReadyButton)
-//        var p2HandBuildingReadyButton = findViewById<Button>(R.id.p2HandBuildingReadyButton)
+        var player1NameTextView = findViewById<TextView>(R.id.player1NameTextView)
+        var player2NameTextView = findViewById<TextView>(R.id.player2NameTextVIew)
+
+        p1HandBuildingReadyButton = findViewById(R.id.p1HandBuildingReadyButton)
+        p2HandBuildingReadyButton = findViewById(R.id.p2HandBuildingReadyButton)
 
         p1ChosenExtraCard1ImageButton = findViewById(R.id.p1ChosenExtraCard1ImageButton)
         p1ChosenExtraCard2ImageButton = findViewById(R.id.p1ChosenExtraCard2ImageButton)
         p1ChosenExtraCard3ImageButton = findViewById(R.id.p1ChosenExtraCard3ImageButton)
+        p2ChosenExtraCard1ImageButton = findViewById(R.id.p2ChosenExtraCard1ImageButton)
+        p2ChosenExtraCard2ImageButton = findViewById(R.id.p2ChosenExtraCard2ImageButton)
+        p2ChosenExtraCard3ImageButton = findViewById(R.id.p2ChosenExtraCard3ImageButton)
+
+//        readyToStartBlockerAppBar = findViewById(R.id.readyToStartBlockerAppBar)
 
 
         p1ChosenExtraCard1ImageButton.setEnabled(false)
         p1ChosenExtraCard2ImageButton.setEnabled(false)
         p1ChosenExtraCard3ImageButton.setEnabled(false)
+        p2ChosenExtraCard1ImageButton.setEnabled(false)
+        p2ChosenExtraCard2ImageButton.setEnabled(false)
+        p2ChosenExtraCard3ImageButton.setEnabled(false)
 
-//        p1HandBuildingReadyButton.setOnClickListener {
-//            player1Ready = true
-//            checkReadyToStart()
-//        }
-//        p1HandBuildingReadyButton.setOnClickListener {
-//            player2Ready = true
-//            checkReadyToStart()
-//        }
+        player1Name = intent.getStringExtra("player1Name").toString()
+        player2Name = intent.getStringExtra("player2Name").toString()
+
+        player1NameTextView.text = player1Name
+        player2NameTextView.text = player2Name
+
+
+        p1HandBuildingReadyButton.setEnabled(false)
+        p2HandBuildingReadyButton.setEnabled(false)
+
+
+        p1HandBuildingReadyButton.setOnClickListener {
+            player1Ready = true
+            p1HandBuildingReadyButton.setEnabled(false)
+            checkReadyToStart()
+        }
+        p2HandBuildingReadyButton.setOnClickListener {
+            player2Ready = true
+            p2HandBuildingReadyButton.setEnabled(false)
+            checkReadyToStart()
+        }
 
         p1AvailableExtraCard1ImageButton.setOnClickListener{
             var chosenValue = 1
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard1ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+
         }
         p1AvailableExtraCard2ImageButton.setOnClickListener{
             var chosenValue = 2
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard2ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard3ImageButton.setOnClickListener{
             var chosenValue = 3
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard3ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard4ImageButton.setOnClickListener{
             var chosenValue = 4
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard4ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard5ImageButton.setOnClickListener{
             var chosenValue = 5
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard5ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard6ImageButton.setOnClickListener{
             var chosenValue = -1
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard6ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard7ImageButton.setOnClickListener{
             var chosenValue = -2
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard7ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard8ImageButton.setOnClickListener{
             var chosenValue = -3
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard8ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard9ImageButton.setOnClickListener{
             var chosenValue = -4
-            chooseCardAsExtra(chosenValue)
+            var playerValue = 1
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard9ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
         }
 
 
 
-//        var textView = findViewById<TextView>(R.id.textView)
-//        textView.text= player1Name
+
+        p2AvailableExtraCard1ImageButton.setOnClickListener{
+            var chosenValue = 1
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard1ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+
+        }
+        p2AvailableExtraCard2ImageButton.setOnClickListener{
+            var chosenValue = 2
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue,playerValue)
+            setCardImage()
+            p2AvailableExtraCard2ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+        p2AvailableExtraCard3ImageButton.setOnClickListener{
+            var chosenValue = 3
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard3ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+        p2AvailableExtraCard4ImageButton.setOnClickListener{
+            var chosenValue = 4
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard4ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+        p2AvailableExtraCard5ImageButton.setOnClickListener{
+            var chosenValue = 5
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard5ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+        p2AvailableExtraCard6ImageButton.setOnClickListener{
+            var chosenValue = -1
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard6ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+        p2AvailableExtraCard7ImageButton.setOnClickListener{
+            var chosenValue = -2
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard7ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+        p2AvailableExtraCard8ImageButton.setOnClickListener{
+            var chosenValue = -3
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard8ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+        p2AvailableExtraCard9ImageButton.setOnClickListener{
+            var chosenValue = -4
+            var playerValue = 2
+            chooseCardAsExtra(chosenValue, playerValue)
+            setCardImage()
+            p2AvailableExtraCard9ImageButton.setEnabled(false)
+            checkIfCardsReady(playerValue)
+        }
+
+
+
+
+
+
+        p1ChosenExtraCard1ImageButton.setOnClickListener{
+            var currentValue = p1ChosenExtraCard1Value
+            var playerValue = 1
+            ReenableCards(playerValue, currentValue) 
+            p1ChosenExtraCard1Value = 0
+            setCardImage()
+            checkIfCardsReady(playerValue)
+            p1ChosenExtraCard1ImageButton.setEnabled(false)
+
+        }
+
+        p1ChosenExtraCard2ImageButton.setOnClickListener{
+            var currentValue = p1ChosenExtraCard2Value
+            var playerValue = 1
+            ReenableCards(playerValue, currentValue)
+            p1ChosenExtraCard2Value = 0
+            setCardImage()
+            checkIfCardsReady(playerValue)
+            p1ChosenExtraCard2ImageButton.setEnabled(false)
+
+        }
+
+        p1ChosenExtraCard3ImageButton.setOnClickListener{
+            var currentValue = p1ChosenExtraCard3Value
+            var playerValue = 1
+            ReenableCards(playerValue, currentValue)
+            p1ChosenExtraCard3Value = 0
+            setCardImage()
+            checkIfCardsReady(playerValue)
+            p1ChosenExtraCard3ImageButton.setEnabled(false)
+
+        }
+
+        p2ChosenExtraCard1ImageButton.setOnClickListener{
+            var currentValue = p2ChosenExtraCard1Value
+            var playerValue = 2
+            ReenableCards(playerValue, currentValue)
+            p2ChosenExtraCard1Value = 0
+            setCardImage()
+            checkIfCardsReady(playerValue)
+            p2ChosenExtraCard1ImageButton.setEnabled(false)
+
+        }
+
+        p2ChosenExtraCard2ImageButton.setOnClickListener{
+            var currentValue = p2ChosenExtraCard2Value
+            var playerValue = 2
+            ReenableCards(playerValue, currentValue)
+            p2ChosenExtraCard2Value = 0
+            setCardImage()
+            checkIfCardsReady(playerValue)
+            p2ChosenExtraCard2ImageButton.setEnabled(false)
+
+        }
+
+        p2ChosenExtraCard3ImageButton.setOnClickListener{
+            var currentValue = p2ChosenExtraCard3Value
+            var playerValue = 2
+            ReenableCards(playerValue, currentValue)
+            p2ChosenExtraCard3Value = 0
+            setCardImage()
+            checkIfCardsReady(playerValue)
+            p2ChosenExtraCard3ImageButton.setEnabled(false)
+
+        }
+
 
     }
 
-//    fun checkReadyToStart(){
-//        if(player1Ready == true && player2Ready == true){
-//            val intent = Intent(this, MainActivity::class.java)
-//            intent.putExtra("player1Name", player1Name)
-//            intent.putExtra("player2Name", player2Name)
-//            intent.putExtra("chosenExtraCard1Value",chosenExtraCard1Value)
-//            intent.putExtra("chosenExtraCard2Value",chosenExtraCard2Value)
-//            intent.putExtra("chosenExtraCard3Value",chosenExtraCard3Value)
-//            startActivity(intent)
-//        }
-//    }
+    fun ReenableCards(playerValue: Int, currentValue: Int){
+        if (playerValue == 1){
+                  when(currentValue){
 
-    fun chooseCardAsExtra(cardValue: Int) {
-        if (chosenExtraCard1Value == 0) {
-            chosenExtraCard1Value = cardValue
-        } else if (chosenExtraCard2Value == 0) {
-            chosenExtraCard2Value = cardValue
-        } else if (chosenExtraCard3Value == 0) {
-            chosenExtraCard3Value = cardValue
+                      1->{
+                          p1AvailableExtraCard1ImageButton.setEnabled(true)
+                      }
+                      2->{
+                          p1AvailableExtraCard2ImageButton.setEnabled(true)
+                      }
+                      3->{
+                          p1AvailableExtraCard3ImageButton.setEnabled(true)
+                      }
+                      4->{
+                          p1AvailableExtraCard4ImageButton.setEnabled(true)
+                      }
+                      5->{
+                          p1AvailableExtraCard5ImageButton.setEnabled(true)
+                      }
+                      -1->{
+                          p1AvailableExtraCard6ImageButton.setEnabled(true)
+                      }
+                      -2->{
+                          p1AvailableExtraCard7ImageButton.setEnabled(true)
+                      }
+                      -3->{
+                          p1AvailableExtraCard8ImageButton.setEnabled(true)
+                      }
+                      -4->{
+                          p1AvailableExtraCard9ImageButton.setEnabled(true)
+                      }
+                  }
+        }
+        
+        if (playerValue == 2){
+                  when(currentValue){
+
+                      1->{
+                          p2AvailableExtraCard1ImageButton.setEnabled(true)
+                      }
+                      2->{
+                          p2AvailableExtraCard2ImageButton.setEnabled(true)
+                      }
+                      3->{
+                          p2AvailableExtraCard3ImageButton.setEnabled(true)
+                      }
+                      4->{
+                          p2AvailableExtraCard4ImageButton.setEnabled(true)
+                      }
+                      5->{
+                          p2AvailableExtraCard5ImageButton.setEnabled(true)
+                      }
+                      -1->{
+                          p2AvailableExtraCard6ImageButton.setEnabled(true)
+                      }
+                      -2->{
+                          p2AvailableExtraCard7ImageButton.setEnabled(true)
+                      }
+                      -3->{
+                          p2AvailableExtraCard8ImageButton.setEnabled(true)
+                      }
+                      -4->{
+                          p2AvailableExtraCard9ImageButton.setEnabled(true)
+                      }
+                  }
+        }
+
+
+
+
+    }
+
+    fun checkIfCardsReady(playerValue: Int){
+
+        if(playerValue == 1) {
+            if (p1ChosenExtraCard1Value != 0 && p1ChosenExtraCard2Value != 0 && p1ChosenExtraCard3Value != 0) {
+                p1HandBuildingReadyButton.setEnabled(true)
+//                readyToStartBlockerAppBar.setVisibility(View.VISIBLE)
+            } else {
+                p1HandBuildingReadyButton.setEnabled(false)
+//                readyToStartBlockerAppBar.setVisibility(View.INVISIBLE)
+            }
+        }else if(playerValue == 2) {
+            if (p2ChosenExtraCard1Value != 0 && p2ChosenExtraCard2Value != 0 && p2ChosenExtraCard3Value != 0) {
+                p2HandBuildingReadyButton.setEnabled(true)
+            } else {
+                p2HandBuildingReadyButton.setEnabled(false)
+            }
+        }
+    }
+
+    fun checkReadyToStart(){
+        if(player1Ready == true && player2Ready == true){
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("player1Name", player1Name)
+            intent.putExtra("player2Name", player2Name)
+            intent.putExtra("chosenExtraCard1Value",p1ChosenExtraCard1Value)
+            intent.putExtra("chosenExtraCard2Value",p1ChosenExtraCard2Value)
+            intent.putExtra("chosenExtraCard3Value",p1ChosenExtraCard3Value)
+            startActivity(intent)
+        }
+    }
+
+    fun chooseCardAsExtra(cardValue: Int,playerValue: Int) {
+        if(playerValue== 1) {
+            if (p1ChosenExtraCard1Value == 0) {
+                p1ChosenExtraCard1Value = cardValue
+                p1ChosenExtraCard1ImageButton.setEnabled(true)
+            } else if (p1ChosenExtraCard2Value == 0) {
+                p1ChosenExtraCard2Value = cardValue
+                p1ChosenExtraCard2ImageButton.setEnabled(true)
+            } else if (p1ChosenExtraCard3Value == 0) {
+                p1ChosenExtraCard3Value = cardValue
+                p1ChosenExtraCard3ImageButton.setEnabled(true)
+            }
+        }else if(playerValue== 2) {
+            if (p2ChosenExtraCard1Value == 0) {
+                p2ChosenExtraCard1Value = cardValue
+                p2ChosenExtraCard1ImageButton.setEnabled(true)
+            } else if (p2ChosenExtraCard2Value == 0) {
+                p2ChosenExtraCard2Value = cardValue
+                p2ChosenExtraCard2ImageButton.setEnabled(true)
+            } else if (p2ChosenExtraCard3Value == 0) {
+                p2ChosenExtraCard3Value = cardValue
+                p2ChosenExtraCard3ImageButton.setEnabled(true)
+            }
         }
     }
 
     fun setCardImage(){
-        when (chosenExtraCard1Value){
+        when (p1ChosenExtraCard1Value){
+
+            0->{
+                p1ChosenExtraCard1ImageButton.setImageResource(android.R.color.transparent)
+            }
 
             1->{
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d1)
@@ -176,8 +514,11 @@ class HandBuildingActivity : AppCompatActivity() {
 
         }
 
-        when (chosenExtraCard2Value){
+        when (p1ChosenExtraCard2Value){
 
+            0->{
+                p1ChosenExtraCard2ImageButton.setImageResource(android.R.color.transparent)
+            }
             1->{
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d1)
             }
@@ -208,8 +549,11 @@ class HandBuildingActivity : AppCompatActivity() {
 
         }
 
-        when (chosenExtraCard3Value){
+        when (p1ChosenExtraCard3Value){
 
+            0->{
+                p1ChosenExtraCard3ImageButton.setImageResource(android.R.color.transparent)
+            }
             1->{
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d1)
             }
@@ -236,6 +580,111 @@ class HandBuildingActivity : AppCompatActivity() {
             }
             -4->{
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d9)
+            }
+
+        }
+
+        when (p2ChosenExtraCard1Value){
+
+            0->{
+                p2ChosenExtraCard1ImageButton.setImageResource(android.R.color.transparent)
+            }
+            1->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d1)
+            }
+            2->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d2)
+            }
+            3->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d3)
+            }
+            4->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d4)
+            }
+            5->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d5)
+            }
+            -1->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d6)
+            }
+            -2->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d7)
+            }
+            -3->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d8)
+            }
+            -4->{
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d9)
+            }
+
+        }
+
+        when (p2ChosenExtraCard2Value){
+
+            0->{
+                p2ChosenExtraCard2ImageButton.setImageResource(android.R.color.transparent)
+            }
+            1->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d1)
+            }
+            2->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d2)
+            }
+            3->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d3)
+            }
+            4->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d4)
+            }
+            5->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d5)
+            }
+            -1->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d6)
+            }
+            -2->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d7)
+            }
+            -3->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d8)
+            }
+            -4->{
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d9)
+            }
+
+        }
+
+        when (p2ChosenExtraCard3Value){
+
+            0->{
+                p2ChosenExtraCard3ImageButton.setImageResource(android.R.color.transparent)
+            }
+            1->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d1)
+            }
+            2->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d2)
+            }
+            3->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d3)
+            }
+            4->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d4)
+            }
+            5->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d5)
+            }
+            -1->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d6)
+            }
+            -2->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d7)
+            }
+            -3->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d8)
+            }
+            -4->{
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d9)
             }
 
         }

@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         p1CardEightImageView = findViewById(R.id.p1CardEightImageView)
         p1CardNineImageView = findViewById(R.id.p1CardNineImageView)
 
-        p1EndTurnButton = findViewById<Button>(R.id.p1EndTurnButton)
+        p1EndTurnButton = findViewById(R.id.p1EndTurnButton)
         val p1StandButton = findViewById<Button>(R.id.p1StandButton)
         p1ScoreTextView = findViewById(R.id.p1ScoreTextView)
 
