@@ -450,17 +450,120 @@ class HandBuildingActivity : AppCompatActivity() {
         if(playerValue == 1) {
             if (p1ChosenExtraCard1Value != 0 && p1ChosenExtraCard2Value != 0 && p1ChosenExtraCard3Value != 0) {
                 p1HandBuildingReadyButton.setEnabled(true)
+                lockCards(playerValue)
             } else {
                 p1HandBuildingReadyButton.setEnabled(false)
+                unlockCards(playerValue)
             }
         }else if(playerValue == 2) {
             if (p2ChosenExtraCard1Value != 0 && p2ChosenExtraCard2Value != 0 && p2ChosenExtraCard3Value != 0) {
                 p2HandBuildingReadyButton.setEnabled(true)
+                lockCards(playerValue)
             } else {
                 p2HandBuildingReadyButton.setEnabled(false)
+                unlockCards(playerValue)
             }
         }
     }
+
+    //function to lock all cards if 3 have already been chosen
+
+    fun lockCards(playerValue:Int){
+        if (playerValue == 1){
+            p1AvailableExtraCard1ImageButton.setEnabled(false)
+            p1AvailableExtraCard2ImageButton.setEnabled(false)
+            p1AvailableExtraCard3ImageButton.setEnabled(false)
+            p1AvailableExtraCard4ImageButton.setEnabled(false)
+            p1AvailableExtraCard5ImageButton.setEnabled(false)
+            p1AvailableExtraCard6ImageButton.setEnabled(false)
+            p1AvailableExtraCard7ImageButton.setEnabled(false)
+            p1AvailableExtraCard8ImageButton.setEnabled(false)
+            p1AvailableExtraCard9ImageButton.setEnabled(false)
+        }else if(playerValue == 2){
+            p2AvailableExtraCard1ImageButton.setEnabled(false)
+            p2AvailableExtraCard2ImageButton.setEnabled(false)
+            p2AvailableExtraCard3ImageButton.setEnabled(false)
+            p2AvailableExtraCard4ImageButton.setEnabled(false)
+            p2AvailableExtraCard5ImageButton.setEnabled(false)
+            p2AvailableExtraCard6ImageButton.setEnabled(false)
+            p2AvailableExtraCard7ImageButton.setEnabled(false)
+            p2AvailableExtraCard8ImageButton.setEnabled(false)
+            p2AvailableExtraCard9ImageButton.setEnabled(false)
+        }
+
+    }
+
+
+    //Function to unlock cards if one card in hand gets unpicked
+    // Checks value of other cards in hand to not reenable an already picked card
+
+    fun unlockCards(playerValue: Int){
+        if(playerValue == 1){
+
+            if(p1ChosenExtraCard1Value !=1 && p2ChosenExtraCard2Value !=1 && p1ChosenExtraCard3Value != 1){
+                p1AvailableExtraCard1ImageButton.setEnabled(true)
+            }
+            if (p1ChosenExtraCard1Value !=2 && p1ChosenExtraCard2Value !=2 && p1ChosenExtraCard3Value != 2){
+                p1AvailableExtraCard2ImageButton.setEnabled(true)
+            }
+            if (p1ChosenExtraCard1Value !=3 && p1ChosenExtraCard2Value !=3 && p1ChosenExtraCard3Value != 3){
+                p2AvailableExtraCard3ImageButton.setEnabled(true)
+            }
+            if (p1ChosenExtraCard1Value !=4 && p1ChosenExtraCard2Value !=4 && p1ChosenExtraCard3Value != 4){
+                p1AvailableExtraCard4ImageButton.setEnabled(true)
+            }
+            if (p1ChosenExtraCard1Value !=5 && p1ChosenExtraCard2Value !=5 && p1ChosenExtraCard3Value != 5) {
+                p1AvailableExtraCard5ImageButton.setEnabled(true)
+            }
+            if  (p1ChosenExtraCard1Value !=-1 && p1ChosenExtraCard2Value !=-1 && p1ChosenExtraCard3Value != -1){
+                p1AvailableExtraCard6ImageButton.setEnabled(true)
+            }
+            if  (p1ChosenExtraCard1Value !=-2 && p1ChosenExtraCard2Value !=-2 && p1ChosenExtraCard3Value != -2){
+                p1AvailableExtraCard7ImageButton.setEnabled(true)
+            }
+            if  (p1ChosenExtraCard1Value !=-3 && p1ChosenExtraCard2Value !=-3 && p1ChosenExtraCard3Value != -3){
+                p1AvailableExtraCard8ImageButton.setEnabled(true)
+            }
+            if  (p1ChosenExtraCard1Value !=-4 && p1ChosenExtraCard2Value !=-4 && p1ChosenExtraCard3Value != -4){
+                p1AvailableExtraCard9ImageButton.setEnabled(true)
+            }
+        }
+        if(playerValue == 2){
+
+
+            if(p2ChosenExtraCard1Value !=1 && p2ChosenExtraCard2Value !=1 && p2ChosenExtraCard3Value != 1){
+                    p2AvailableExtraCard1ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value !=2 && p2ChosenExtraCard2Value !=2 && p2ChosenExtraCard3Value != 2){
+                    p2AvailableExtraCard2ImageButton.setEnabled(true)
+                }
+            if (p2ChosenExtraCard1Value !=3 && p2ChosenExtraCard2Value !=3 && p2ChosenExtraCard3Value != 3){
+                    p2AvailableExtraCard3ImageButton.setEnabled(true)
+                }
+            if (p2ChosenExtraCard1Value !=4 && p2ChosenExtraCard2Value !=4 && p2ChosenExtraCard3Value != 4){
+                    p2AvailableExtraCard4ImageButton.setEnabled(true)
+                }
+            if (p2ChosenExtraCard1Value !=5 && p2ChosenExtraCard2Value !=5 && p2ChosenExtraCard3Value != 5) {
+                    p2AvailableExtraCard5ImageButton.setEnabled(true)
+                }
+            if  (p2ChosenExtraCard1Value !=-1 && p2ChosenExtraCard2Value !=-1 && p2ChosenExtraCard3Value != -1){
+                    p2AvailableExtraCard6ImageButton.setEnabled(true)
+                }
+            if  (p2ChosenExtraCard1Value !=-2 && p2ChosenExtraCard2Value !=-2 && p2ChosenExtraCard3Value != -2){
+                    p2AvailableExtraCard7ImageButton.setEnabled(true)
+                }
+            if  (p2ChosenExtraCard1Value !=-3 && p2ChosenExtraCard2Value !=-3 && p2ChosenExtraCard3Value != -3){
+                    p2AvailableExtraCard8ImageButton.setEnabled(true)
+                }
+            if  (p2ChosenExtraCard1Value !=-4 && p2ChosenExtraCard2Value !=-4 && p2ChosenExtraCard3Value != -4){
+                    p2AvailableExtraCard9ImageButton.setEnabled(true)
+                }
+        }
+
+    }
+
+
+
     //  checks if both players have pressed the ready button
     //  if both players are ready then it initiates the next activity
     //  sends the chosen player names and the chosen extra cards to the next activity

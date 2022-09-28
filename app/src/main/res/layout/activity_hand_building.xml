@@ -392,10 +392,10 @@
         app:layout_constraintVertical_bias="0.709" />
 
     <Button
-        android:id="@+id/p1ResetHandButton"
+        android:id="@+id/p1ClearHandButton"
         android:layout_width="86dp"
         android:layout_height="50dp"
-        android:text="Reset"
+        android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.378"
@@ -404,23 +404,15 @@
         app:layout_constraintVertical_bias="0.935" />
 
     <Button
-        android:id="@+id/p2ResetHandButton"
+        android:id="@+id/p2ClearHandButton"
         android:layout_width="86dp"
         android:layout_height="50dp"
-        android:text="Reset"
+        android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.978"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.935" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="45dp"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="243dp"
-        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
