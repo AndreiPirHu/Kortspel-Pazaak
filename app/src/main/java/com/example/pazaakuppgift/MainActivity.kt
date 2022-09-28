@@ -125,35 +125,35 @@ class MainActivity : AppCompatActivity() {
             1-> {
                 when(cardValue){
                     1->{
-                        p1CardOneImageView.setImageResource(R.drawable.d1)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardplus1)
                     }
                     2->{
-                        p1CardOneImageView.setImageResource(R.drawable.d2)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardplus2)
                     }
                     3->{
-                        p1CardOneImageView.setImageResource(R.drawable.d3)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardplus3)
                     }
                     4->{
-                        p1CardOneImageView.setImageResource(R.drawable.d4)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardplus4)
                     }
                     5->{
-                        p1CardOneImageView.setImageResource(R.drawable.d5)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardplus5)
                     }
                     -1->{
-                        p1CardOneImageView.setImageResource(R.drawable.d6)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardminus1)
                     }
                     -2->{
-                        p1CardOneImageView.setImageResource(R.drawable.d7)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardminus2)
                     }
                     -3->{
-                        p1CardOneImageView.setImageResource(R.drawable.d8)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardminus3)
                     }
                     -4->{
-                        p1CardOneImageView.setImageResource(R.drawable.d9)
+                        p1CardOneImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    -5->{
-                        p1CardOneImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardOneImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
 
 
                 }
@@ -172,36 +172,36 @@ class MainActivity : AppCompatActivity() {
 
             2-> {
                 when(cardValue) {
-                    1 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardTwoImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardTwoImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -216,36 +216,36 @@ class MainActivity : AppCompatActivity() {
 
             3-> {
                 when(cardValue) {
-                    1 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardThreeImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardThreeImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -260,36 +260,36 @@ class MainActivity : AppCompatActivity() {
 
             4-> {
                 when(cardValue) {
-                    1 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardFourImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardFourImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -304,36 +304,36 @@ class MainActivity : AppCompatActivity() {
 
             5-> {
                 when(cardValue) {
-                    1 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardFiveImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardFiveImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -348,36 +348,36 @@ class MainActivity : AppCompatActivity() {
 
             6-> {
                 when(cardValue) {
-                    1 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardSixImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardSixImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -392,36 +392,36 @@ class MainActivity : AppCompatActivity() {
 
             7->{
                 when(cardValue) {
-                    1 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardSevenImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardSevenImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -437,36 +437,36 @@ class MainActivity : AppCompatActivity() {
 
             8->{
                 when(cardValue) {
-                    1 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardEightImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardEightImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -481,36 +481,36 @@ class MainActivity : AppCompatActivity() {
 
             9->{
                 when(cardValue) {
-                    1 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d1)
+                    1->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardplus1)
                     }
-                    2 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d2)
+                    2->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardplus2)
                     }
-                    3 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d3)
+                    3->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardplus3)
                     }
-                    4 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d4)
+                    4->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardplus4)
                     }
-                    5 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d5)
+                    5->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardplus5)
                     }
-                    6 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d6)
+                    -1->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardminus1)
                     }
-                    7 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d7)
+                    -2->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardminus2)
                     }
-                    8 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d8)
+                    -3->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardminus3)
                     }
-                    9 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d9)
+                    -4->{
+                        p1CardNineImageView.setImageResource(R.drawable.extracardminus4)
                     }
-                    10 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d10)
-                    }
+//                    -5->{
+//                        p1CardNineImageView.setImageResource(R.drawable.extracardminus4)
+//                    }
                 }
                 if ((p1ExtraCard1Value < 0) || (p1ExtraCard1Value > 0)){
                     p1ExtraCard1UsedValue = p1ExtraCard1Value
@@ -543,34 +543,34 @@ class MainActivity : AppCompatActivity() {
             1-> {
                 when(cardValue){
                     1->{
-                        p1CardOneImageView.setImageResource(R.drawable.d1)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2->{
-                        p1CardOneImageView.setImageResource(R.drawable.d2)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3->{
-                        p1CardOneImageView.setImageResource(R.drawable.d3)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4->{
-                        p1CardOneImageView.setImageResource(R.drawable.d4)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5->{
-                        p1CardOneImageView.setImageResource(R.drawable.d5)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6->{
-                        p1CardOneImageView.setImageResource(R.drawable.d6)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7->{
-                        p1CardOneImageView.setImageResource(R.drawable.d7)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8->{
-                        p1CardOneImageView.setImageResource(R.drawable.d8)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9->{
-                        p1CardOneImageView.setImageResource(R.drawable.d9)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10->{
-                        p1CardOneImageView.setImageResource(R.drawable.d10)
+                        p1CardOneImageView.setImageResource(R.drawable.normalcard10)
                     }
 
 
@@ -581,34 +581,34 @@ class MainActivity : AppCompatActivity() {
             2-> {
                 when(cardValue) {
                     1 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d1)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d2)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d3)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d4)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d5)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d6)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d7)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d8)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d9)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardTwoImageView.setImageResource(R.drawable.d10)
+                        p1CardTwoImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round2Score = cardValue
@@ -617,34 +617,34 @@ class MainActivity : AppCompatActivity() {
             3-> {
                 when(cardValue) {
                     1 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d1)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d2)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d3)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d4)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d5)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d6)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d7)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d8)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d9)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardThreeImageView.setImageResource(R.drawable.d10)
+                        p1CardThreeImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round3Score = cardValue
@@ -653,34 +653,34 @@ class MainActivity : AppCompatActivity() {
             4-> {
                 when(cardValue) {
                     1 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d1)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d2)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d3)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d4)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d5)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d6)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d7)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d8)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d9)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardFourImageView.setImageResource(R.drawable.d10)
+                        p1CardFourImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round4Score = cardValue
@@ -689,34 +689,34 @@ class MainActivity : AppCompatActivity() {
             5-> {
                 when(cardValue) {
                     1 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d1)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d2)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d3)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d4)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d5)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d6)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d7)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d8)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d9)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardFiveImageView.setImageResource(R.drawable.d10)
+                        p1CardFiveImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round5Score = cardValue
@@ -725,34 +725,34 @@ class MainActivity : AppCompatActivity() {
             6-> {
                 when(cardValue) {
                     1 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d1)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d2)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d3)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d4)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d5)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d6)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d7)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d8)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d9)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardSixImageView.setImageResource(R.drawable.d10)
+                        p1CardSixImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round6Score = cardValue
@@ -761,34 +761,34 @@ class MainActivity : AppCompatActivity() {
             7->{
                 when(cardValue) {
                     1 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d1)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d2)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d3)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d4)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d5)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d6)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d7)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d8)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d9)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardSevenImageView.setImageResource(R.drawable.d10)
+                        p1CardSevenImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round7Score = cardValue
@@ -798,34 +798,34 @@ class MainActivity : AppCompatActivity() {
             8->{
                 when(cardValue) {
                     1 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d1)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d2)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d3)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d4)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d5)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d6)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d7)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d8)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d9)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardEightImageView.setImageResource(R.drawable.d10)
+                        p1CardEightImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round8Score = cardValue
@@ -834,34 +834,34 @@ class MainActivity : AppCompatActivity() {
             9->{
                 when(cardValue) {
                     1 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d1)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard1)
                     }
                     2 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d2)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard2)
                     }
                     3 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d3)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard3)
                     }
                     4 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d4)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard4)
                     }
                     5 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d5)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard5)
                     }
                     6 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d6)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard6)
                     }
                     7 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d7)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard7)
                     }
                     8 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d8)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard8)
                     }
                     9 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d9)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard9)
                     }
                     10 -> {
-                        p1CardNineImageView.setImageResource(R.drawable.d10)
+                        p1CardNineImageView.setImageResource(R.drawable.normalcard10)
                     }
                 }
                 p1Round9Score = cardValue
