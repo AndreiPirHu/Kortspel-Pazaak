@@ -90,6 +90,7 @@ class HandBuildingActivity : AppCompatActivity() {
         p1HandBuildingReadyButton = findViewById(R.id.p1HandBuildingReadyButton)
         p2HandBuildingReadyButton = findViewById(R.id.p2HandBuildingReadyButton)
 
+
         p1ChosenExtraCard1ImageButton = findViewById(R.id.p1ChosenExtraCard1ImageButton)
         p1ChosenExtraCard2ImageButton = findViewById(R.id.p1ChosenExtraCard2ImageButton)
         p1ChosenExtraCard3ImageButton = findViewById(R.id.p1ChosenExtraCard3ImageButton)
@@ -132,6 +133,8 @@ class HandBuildingActivity : AppCompatActivity() {
             p2HandBuildingReadyButton.setEnabled(false)
             checkReadyToStart()
         }
+
+
         //  clicking an available card picks it as one of the chosen extra cards
         // playerValue tells which player is clicking and chosenValue gives the card's value
         //  button is disabled after being chosen
@@ -616,31 +619,31 @@ class HandBuildingActivity : AppCompatActivity() {
             }
 
             1->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d1)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
             }
             2->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d2)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus2)
             }
             3->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d3)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus3)
             }
             4->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d4)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus4)
             }
             5->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d5)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus5)
             }
             -1->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d6)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus1)
             }
             -2->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d7)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus2)
             }
             -3->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d8)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus3)
             }
             -4->{
-                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.d9)
+                p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
@@ -651,31 +654,31 @@ class HandBuildingActivity : AppCompatActivity() {
                 p1ChosenExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             }
             1->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d1)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus1)
             }
             2->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d2)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
             }
             3->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d3)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus3)
             }
             4->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d4)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus4)
             }
             5->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d5)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus5)
             }
             -1->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d6)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus1)
             }
             -2->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d7)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus2)
             }
             -3->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d8)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus3)
             }
             -4->{
-                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.d9)
+                p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
@@ -686,31 +689,31 @@ class HandBuildingActivity : AppCompatActivity() {
                 p1ChosenExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             }
             1->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d1)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus1)
             }
             2->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d2)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus2)
             }
             3->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d3)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
             }
             4->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d4)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus4)
             }
             5->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d5)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus5)
             }
             -1->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d6)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus1)
             }
             -2->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d7)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus2)
             }
             -3->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d8)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus3)
             }
             -4->{
-                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.d9)
+                p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
@@ -721,31 +724,31 @@ class HandBuildingActivity : AppCompatActivity() {
                 p2ChosenExtraCard1ImageButton.setImageResource(android.R.color.transparent)
             }
             1->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d1)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
             }
             2->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d2)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus2)
             }
             3->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d3)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus3)
             }
             4->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d4)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus4)
             }
             5->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d5)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus5)
             }
             -1->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d6)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus1)
             }
             -2->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d7)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus2)
             }
             -3->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d8)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus3)
             }
             -4->{
-                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.d9)
+                p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
@@ -756,31 +759,31 @@ class HandBuildingActivity : AppCompatActivity() {
                 p2ChosenExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             }
             1->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d1)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus1)
             }
             2->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d2)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
             }
             3->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d3)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus3)
             }
             4->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d4)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus4)
             }
             5->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d5)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus5)
             }
             -1->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d6)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus1)
             }
             -2->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d7)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus2)
             }
             -3->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d8)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus3)
             }
             -4->{
-                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.d9)
+                p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
@@ -791,31 +794,31 @@ class HandBuildingActivity : AppCompatActivity() {
                 p2ChosenExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             }
             1->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d1)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus1)
             }
             2->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d2)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus2)
             }
             3->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d3)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
             }
             4->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d4)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus4)
             }
             5->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d5)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus5)
             }
             -1->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d6)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus1)
             }
             -2->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d7)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus2)
             }
             -3->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d8)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus3)
             }
             -4->{
-                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.d9)
+                p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
