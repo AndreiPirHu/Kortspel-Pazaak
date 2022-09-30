@@ -1,6 +1,7 @@
 package com.example.pazaakuppgift
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,11 +17,16 @@ class MainMenu : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main_menu)
+            //locks the activity in landscape mode
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+
 
             var startGameNavButton = findViewById<Button>(R.id.startGameNavButton)
             var rulesNavButton = findViewById<Button>(R.id.rulesNavButton)
+
             player1NameView = findViewById(R.id.player1NameView)
             player2NameView = findViewById(R.id.player2NameView)
+
             var submitPlayer1NameButton = findViewById<Button>(R.id.submitPlayer1NameButton)
             var submitPlayer2NameButton = findViewById<Button>(R.id.submitPlayer2NameButton)
             var changePlayer1NameButton = findViewById<Button>(R.id.changePlayer1NameButton)

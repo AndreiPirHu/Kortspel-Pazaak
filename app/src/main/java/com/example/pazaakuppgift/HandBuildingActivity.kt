@@ -1,6 +1,7 @@
 package com.example.pazaakuppgift
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -64,6 +65,10 @@ class HandBuildingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hand_building)
+
+        //locks the activity in landscape mode
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+
         // finding the id of elements in the layout
         p1AvailableExtraCard1ImageButton = findViewById(R.id.p1AvailableExtraCard1ImageButton)
         p1AvailableExtraCard2ImageButton = findViewById(R.id.p1AvailableExtraCard2ImageButton)
@@ -575,9 +580,12 @@ class HandBuildingActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("player1Name", player1Name)
             intent.putExtra("player2Name", player2Name)
-            intent.putExtra("chosenExtraCard1Value",p1ChosenExtraCard1Value)
-            intent.putExtra("chosenExtraCard2Value",p1ChosenExtraCard2Value)
-            intent.putExtra("chosenExtraCard3Value",p1ChosenExtraCard3Value)
+            intent.putExtra("p1ChosenExtraCard1Value",p1ChosenExtraCard1Value)
+            intent.putExtra("p1ChosenExtraCard2Value",p1ChosenExtraCard2Value)
+            intent.putExtra("p1ChosenExtraCard3Value",p1ChosenExtraCard3Value)
+            intent.putExtra("p2ChosenExtraCard1Value",p2ChosenExtraCard1Value)
+            intent.putExtra("p2ChosenExtraCard2Value",p2ChosenExtraCard2Value)
+            intent.putExtra("p2ChosenExtraCard3Value",p2ChosenExtraCard3Value)
             startActivity(intent)
         }
     }
