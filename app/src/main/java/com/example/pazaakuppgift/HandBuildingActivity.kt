@@ -143,6 +143,7 @@ class HandBuildingActivity : AppCompatActivity() {
         //  clicking an available card picks it as one of the chosen extra cards
         // playerValue tells which player is clicking and chosenValue gives the card's value
         //  button is disabled after being chosen
+        //  changes the image resource to show it has been picked
         //  lastly checks if all extra cards have been chosen. If true, the ready button becomes available
         p1AvailableExtraCard1ImageButton.setOnClickListener{
             var chosenValue = 1
@@ -150,6 +151,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard1ImageButton.setEnabled(false)
+            p1AvailableExtraCard1ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
 
         }
@@ -159,6 +161,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard2ImageButton.setEnabled(false)
+            p1AvailableExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard3ImageButton.setOnClickListener{
@@ -167,6 +170,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard3ImageButton.setEnabled(false)
+            p1AvailableExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard4ImageButton.setOnClickListener{
@@ -175,6 +179,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard4ImageButton.setEnabled(false)
+            p1AvailableExtraCard4ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard5ImageButton.setOnClickListener{
@@ -183,6 +188,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard5ImageButton.setEnabled(false)
+            p1AvailableExtraCard5ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard6ImageButton.setOnClickListener{
@@ -191,6 +197,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard6ImageButton.setEnabled(false)
+            p1AvailableExtraCard6ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard7ImageButton.setOnClickListener{
@@ -199,6 +206,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard7ImageButton.setEnabled(false)
+            p1AvailableExtraCard7ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard8ImageButton.setOnClickListener{
@@ -207,6 +215,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard8ImageButton.setEnabled(false)
+            p1AvailableExtraCard8ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p1AvailableExtraCard9ImageButton.setOnClickListener{
@@ -215,6 +224,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p1AvailableExtraCard9ImageButton.setEnabled(false)
+            p1AvailableExtraCard9ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
 
@@ -222,6 +232,7 @@ class HandBuildingActivity : AppCompatActivity() {
         //  clicking an available card picks it as one of the chosen extra cards
         //  playerValue tells which player is clicking and chosenValue gives the card's value
         //  button is disabled after being chosen
+        //  changes the image resource to show it has been picked
         //  lastly checks if all extra cards have been chosen. If true, the ready button becomes available
         p2AvailableExtraCard1ImageButton.setOnClickListener{
             var chosenValue = 1
@@ -229,6 +240,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard1ImageButton.setEnabled(false)
+            p2AvailableExtraCard1ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
 
         }
@@ -238,6 +250,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue,playerValue)
             setCardImage()
             p2AvailableExtraCard2ImageButton.setEnabled(false)
+            p2AvailableExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p2AvailableExtraCard3ImageButton.setOnClickListener{
@@ -246,6 +259,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard3ImageButton.setEnabled(false)
+            p2AvailableExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p2AvailableExtraCard4ImageButton.setOnClickListener{
@@ -254,6 +268,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard4ImageButton.setEnabled(false)
+            p2AvailableExtraCard4ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p2AvailableExtraCard5ImageButton.setOnClickListener{
@@ -262,6 +277,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard5ImageButton.setEnabled(false)
+            p2AvailableExtraCard5ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p2AvailableExtraCard6ImageButton.setOnClickListener{
@@ -270,6 +286,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard6ImageButton.setEnabled(false)
+            p2AvailableExtraCard6ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p2AvailableExtraCard7ImageButton.setOnClickListener{
@@ -278,6 +295,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard7ImageButton.setEnabled(false)
+            p2AvailableExtraCard7ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p2AvailableExtraCard8ImageButton.setOnClickListener{
@@ -286,6 +304,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard8ImageButton.setEnabled(false)
+            p2AvailableExtraCard8ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
         p2AvailableExtraCard9ImageButton.setOnClickListener{
@@ -294,6 +313,7 @@ class HandBuildingActivity : AppCompatActivity() {
             chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard9ImageButton.setEnabled(false)
+            p2AvailableExtraCard9ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
 
@@ -378,6 +398,7 @@ class HandBuildingActivity : AppCompatActivity() {
 
 
     //  reenables cards if the card is removed from the chosen hand
+    //  also reenables the image resource
     //  gets value from the removed card and also player value to know which player pressed
     fun ReenableCards(playerValue: Int, currentValue: Int){
         if (playerValue == 1){
@@ -385,30 +406,39 @@ class HandBuildingActivity : AppCompatActivity() {
 
                       1->{
                           p1AvailableExtraCard1ImageButton.setEnabled(true)
+                          p1AvailableExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
                       }
                       2->{
                           p1AvailableExtraCard2ImageButton.setEnabled(true)
+                          p1AvailableExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
                       }
                       3->{
                           p1AvailableExtraCard3ImageButton.setEnabled(true)
+                          p1AvailableExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
                       }
                       4->{
                           p1AvailableExtraCard4ImageButton.setEnabled(true)
+                          p1AvailableExtraCard4ImageButton.setImageResource(R.drawable.extracardplus4)
                       }
                       5->{
                           p1AvailableExtraCard5ImageButton.setEnabled(true)
+                          p1AvailableExtraCard5ImageButton.setImageResource(R.drawable.extracardplus5)
                       }
                       -1->{
                           p1AvailableExtraCard6ImageButton.setEnabled(true)
+                          p1AvailableExtraCard6ImageButton.setImageResource(R.drawable.extracardminus1)
                       }
                       -2->{
                           p1AvailableExtraCard7ImageButton.setEnabled(true)
+                          p1AvailableExtraCard7ImageButton.setImageResource(R.drawable.extracardminus2)
                       }
                       -3->{
                           p1AvailableExtraCard8ImageButton.setEnabled(true)
+                          p1AvailableExtraCard8ImageButton.setImageResource(R.drawable.extracardminus3)
                       }
                       -4->{
                           p1AvailableExtraCard9ImageButton.setEnabled(true)
+                          p1AvailableExtraCard9ImageButton.setImageResource(R.drawable.extracardminus4)
                       }
                   }
         }
@@ -418,30 +448,39 @@ class HandBuildingActivity : AppCompatActivity() {
 
                       1->{
                           p2AvailableExtraCard1ImageButton.setEnabled(true)
+                          p2AvailableExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
                       }
                       2->{
                           p2AvailableExtraCard2ImageButton.setEnabled(true)
+                          p2AvailableExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
                       }
                       3->{
                           p2AvailableExtraCard3ImageButton.setEnabled(true)
+                          p2AvailableExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
                       }
                       4->{
                           p2AvailableExtraCard4ImageButton.setEnabled(true)
+                          p2AvailableExtraCard4ImageButton.setImageResource(R.drawable.extracardplus4)
                       }
                       5->{
                           p2AvailableExtraCard5ImageButton.setEnabled(true)
+                          p2AvailableExtraCard5ImageButton.setImageResource(R.drawable.extracardplus5)
                       }
                       -1->{
                           p2AvailableExtraCard6ImageButton.setEnabled(true)
+                          p2AvailableExtraCard6ImageButton.setImageResource(R.drawable.extracardminus1)
                       }
                       -2->{
                           p2AvailableExtraCard7ImageButton.setEnabled(true)
+                          p2AvailableExtraCard7ImageButton.setImageResource(R.drawable.extracardminus2)
                       }
                       -3->{
                           p2AvailableExtraCard8ImageButton.setEnabled(true)
+                          p2AvailableExtraCard8ImageButton.setImageResource(R.drawable.extracardminus3)
                       }
                       -4->{
                           p2AvailableExtraCard9ImageButton.setEnabled(true)
+                          p2AvailableExtraCard9ImageButton.setImageResource(R.drawable.extracardminus4)
                       }
                   }
         }
@@ -515,7 +554,7 @@ class HandBuildingActivity : AppCompatActivity() {
                 p1AvailableExtraCard2ImageButton.setEnabled(true)
             }
             if (p1ChosenExtraCard1Value !=3 && p1ChosenExtraCard2Value !=3 && p1ChosenExtraCard3Value != 3){
-                p2AvailableExtraCard3ImageButton.setEnabled(true)
+                p1AvailableExtraCard3ImageButton.setEnabled(true)
             }
             if (p1ChosenExtraCard1Value !=4 && p1ChosenExtraCard2Value !=4 && p1ChosenExtraCard3Value != 4){
                 p1AvailableExtraCard4ImageButton.setEnabled(true)

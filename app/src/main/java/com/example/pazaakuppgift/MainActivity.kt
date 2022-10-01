@@ -1773,7 +1773,7 @@ class MainActivity : AppCompatActivity() {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus4)
             }
         }
-        when(p1ChosenExtraCard3Value){
+        when(p2ChosenExtraCard3Value){
             1->{
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus1)
             }
