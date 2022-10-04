@@ -199,16 +199,8 @@ class MainActivity : AppCompatActivity() {
         p2ChosenExtraCard2Value = intent.getIntExtra("p2ChosenExtraCard2Value", 4)
         p2ChosenExtraCard3Value = intent.getIntExtra("p2ChosenExtraCard3Value", -3)
 
-        // fetched information from the winner screen with updated scores and used cards checker
+        // fetched extra information from the winner screen with updated scores and used cards checker
         //also keeps check of the player names and their card values
-//        player1Name = intent.getStringExtra("player1Name").toString()
-//        player2Name = intent.getStringExtra("player2Name").toString()
-//        p1ChosenExtraCard1Value = intent.getIntExtra("p1ChosenExtraCard1Value", 1)
-//        p1ChosenExtraCard2Value = intent.getIntExtra("p1ChosenExtraCard2Value", 4)
-//        p1ChosenExtraCard3Value = intent.getIntExtra("p1ChosenExtraCard3Value", -3)
-//        p2ChosenExtraCard1Value = intent.getIntExtra("p2ChosenExtraCard1Value", 1)
-//        p2ChosenExtraCard2Value = intent.getIntExtra("p2ChosenExtraCard2Value", 4)
-//        p2ChosenExtraCard3Value = intent.getIntExtra("p2ChosenExtraCard3Value", -3)
         p1Score = intent.getIntExtra("p1Score", 0)
         p2Score = intent.getIntExtra("p2Score", 0)
         p1ExtraCard1Used = intent.getBooleanExtra("p1ExtraCard1Used", false)
@@ -477,6 +469,7 @@ class MainActivity : AppCompatActivity() {
 
     fun scoreCheck() {
         when (p1Score) {
+
             1 -> {
                 p1Score1ImageView.setImageResource(android.R.drawable.presence_online)
             }
@@ -488,6 +481,16 @@ class MainActivity : AppCompatActivity() {
                 p1Score1ImageView.setImageResource(android.R.drawable.presence_online)
                 p1Score2ImageView.setImageResource(android.R.drawable.presence_online)
                 p1Score3ImageView.setImageResource(android.R.drawable.presence_online)
+
+                //sends the players to game winner activity with the information of the winner
+                // sends players names if players want a rematch
+                winnerName = player1Name
+                val intent = Intent(this, GameWinnerActivity::class.java)
+                intent.putExtra("player1Name", player1Name)
+                intent.putExtra("player2Name", player2Name)
+                intent.putExtra("winnerName", winnerName)
+                startActivity(intent)
+
             }
         }
         when (p2Score) {
@@ -502,6 +505,14 @@ class MainActivity : AppCompatActivity() {
                 p2Score1ImageView.setImageResource(android.R.drawable.presence_online)
                 p2Score2ImageView.setImageResource(android.R.drawable.presence_online)
                 p2Score3ImageView.setImageResource(android.R.drawable.presence_online)
+
+                winnerName = player2Name
+                val intent = Intent(this, GameWinnerActivity::class.java)
+                // old variables to keep check
+                intent.putExtra("player1Name", player1Name)
+                intent.putExtra("player2Name", player2Name)
+                intent.putExtra("winnerName", winnerName)
+                startActivity(intent)
             }
         }
     }

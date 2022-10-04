@@ -69,23 +69,31 @@ class RoundWinnerActivity : AppCompatActivity() {
         p2ExtraCard3Used = intent.getBooleanExtra("p2ExtraCard3Used", false)
 
 
-
-
         winnerConstraintLayout = findViewById(R.id.winnerConstraintLayout)
 
+
+
+        //Checks if there was a tie. Changes the background color
         if(winnerName == "No one"){
             winnerConstraintLayout.setBackgroundColor(129)
         }
-
+        //Writes out the winners name on the screen
         playerWinsRoundView.text = "$winnerName won this round!"
 
 
 
     }
+
+
+    // if the players touch the screen. Goes back to the next round with a reset board
+    // Already used extra cards are tracked
+    // Player scores are tracked
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         super.onTouchEvent(event)
+        // if the player lifts their finger from the screen, the action is executed
         if(event?.action == MotionEvent.ACTION_UP){
 
+            // sends all the needed variables back to the main activity for the next round
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("p1Score", p1Score)
             intent.putExtra("p2Score", p2Score)
