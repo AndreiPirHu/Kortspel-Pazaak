@@ -199,12 +199,37 @@ class MainActivity : AppCompatActivity() {
         p2ChosenExtraCard2Value = intent.getIntExtra("p2ChosenExtraCard2Value", 4)
         p2ChosenExtraCard3Value = intent.getIntExtra("p2ChosenExtraCard3Value", -3)
 
+        // fetched information from the winner screen with updated scores and used cards checker
+        //also keeps check of the player names and their card values
+//        player1Name = intent.getStringExtra("player1Name").toString()
+//        player2Name = intent.getStringExtra("player2Name").toString()
+//        p1ChosenExtraCard1Value = intent.getIntExtra("p1ChosenExtraCard1Value", 1)
+//        p1ChosenExtraCard2Value = intent.getIntExtra("p1ChosenExtraCard2Value", 4)
+//        p1ChosenExtraCard3Value = intent.getIntExtra("p1ChosenExtraCard3Value", -3)
+//        p2ChosenExtraCard1Value = intent.getIntExtra("p2ChosenExtraCard1Value", 1)
+//        p2ChosenExtraCard2Value = intent.getIntExtra("p2ChosenExtraCard2Value", 4)
+//        p2ChosenExtraCard3Value = intent.getIntExtra("p2ChosenExtraCard3Value", -3)
+        p1Score = intent.getIntExtra("p1Score", 0)
+        p2Score = intent.getIntExtra("p2Score", 0)
+        p1ExtraCard1Used = intent.getBooleanExtra("p1ExtraCard1Used", false)
+        p1ExtraCard2Used = intent.getBooleanExtra("p1ExtraCard2Used", false)
+        p1ExtraCard3Used = intent.getBooleanExtra("p1ExtraCard3Used", false)
+        p2ExtraCard1Used = intent.getBooleanExtra("p2ExtraCard1Used", false)
+        p2ExtraCard2Used = intent.getBooleanExtra("p2ExtraCard2Used", false)
+        p2ExtraCard3Used = intent.getBooleanExtra("p2ExtraCard3Used", false)
+
         // player 2 end turn button is disabled since the game is played in turns
         p2EndTurnButton.setEnabled(false)
 
+        //Checks the current score fetched from the winner activity
+        scoreCheck()
 
         //assign the extra card images based on the ones picked in hand building
         assignExtraCardImages()
+
+        // Checks if the extra cards have been used in previous rounds and disables them if so
+        checkIfExtraCardsUsed()
+
 
         // ends player turn and randomizes a new card on the board
         // Score gets calculated
@@ -223,10 +248,10 @@ class MainActivity : AppCompatActivity() {
             checkTotalValueIf20OrOver(playerValue)
             // ends the turn for current player and starts the other player's turn
             //unless the other player has already pressed stand or has over 20
-            if(p1TotalValue < 20){
+            if(p2TotalValue < 20 && p2Stand == false){
                nextPlayerTurn(playerValue)
             }else{
-                p2EndTurnButton.setEnabled(true)
+                p1EndTurnButton.setEnabled(true)
             }
 
 
@@ -243,7 +268,7 @@ class MainActivity : AppCompatActivity() {
                 scoreCheck()
             }
              checkTotalValueIf20OrOver(playerValue)
-            if(p1TotalValue < 20){
+            if(p1TotalValue < 20 && p1Stand == false){
                 nextPlayerTurn(playerValue)
             }else{
                 p2EndTurnButton.setEnabled(true)
@@ -258,6 +283,9 @@ class MainActivity : AppCompatActivity() {
             p1Stand = true
             standButtonPress(playerValue)
             checkIfPlayersStand()
+            if(p2TotalValue < 20 && p2Stand == false){
+                nextPlayerTurn(playerValue)
+            }
 
         }
         p2StandButton.setOnClickListener {
@@ -265,6 +293,9 @@ class MainActivity : AppCompatActivity() {
             p2Stand = true
             standButtonPress(playerValue)
             checkIfPlayersStand()
+            if(p1TotalValue < 20 && p1Stand == false ){
+                nextPlayerTurn(playerValue)
+            }
 
         }
 
@@ -361,6 +392,16 @@ class MainActivity : AppCompatActivity() {
     fun playerWinsRoundScreen(playerName: String){
         winnerName = playerName
         val intent = Intent(this, RoundWinnerActivity::class.java)
+        // old variables to keep check
+        intent.putExtra("player1Name", player1Name)
+        intent.putExtra("player2Name", player2Name)
+        intent.putExtra("p1ChosenExtraCard1Value",p1ChosenExtraCard1Value)
+        intent.putExtra("p1ChosenExtraCard2Value",p1ChosenExtraCard2Value)
+        intent.putExtra("p1ChosenExtraCard3Value",p1ChosenExtraCard3Value)
+        intent.putExtra("p2ChosenExtraCard1Value",p2ChosenExtraCard1Value)
+        intent.putExtra("p2ChosenExtraCard2Value",p2ChosenExtraCard2Value)
+        intent.putExtra("p2ChosenExtraCard3Value",p2ChosenExtraCard3Value)
+        //New variables to keep check
         intent.putExtra("winnerName", winnerName)
         intent.putExtra("p1Score", p1Score)
         intent.putExtra("p2Score", p2Score)
@@ -371,6 +412,42 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("p2ExtraCard2Used", p2ExtraCard2Used)
         intent.putExtra("p2ExtraCard3Used", p2ExtraCard3Used)
         startActivity(intent)
+
+
+    }
+
+    fun checkIfExtraCardsUsed(){
+        if(p1ExtraCard1Used == true){
+            p1ExtraCard1ImageButton.setEnabled(false)
+            p1ExtraCard1ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
+        }
+
+        if(p1ExtraCard2Used == true){
+            p1ExtraCard2ImageButton.setEnabled(false)
+            p1ExtraCard2ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
+        }
+
+        if(p1ExtraCard3Used == true){
+            p1ExtraCard3ImageButton.setEnabled(false)
+            p1ExtraCard3ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
+        }
+
+        if(p2ExtraCard1Used == true){
+            p2ExtraCard1ImageButton.setEnabled(false)
+            p2ExtraCard1ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
+        }
+
+        if(p2ExtraCard2Used == true){
+            p2ExtraCard2ImageButton.setEnabled(false)
+            p2ExtraCard2ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
+        }
+
+        if(p2ExtraCard3Used == true){
+            p2ExtraCard3ImageButton.setEnabled(false)
+            p2ExtraCard3ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
+        }
+
+
     }
 
 
@@ -404,9 +481,12 @@ class MainActivity : AppCompatActivity() {
                 p1Score1ImageView.setImageResource(android.R.drawable.presence_online)
             }
             2 -> {
+                p1Score1ImageView.setImageResource(android.R.drawable.presence_online)
                 p1Score2ImageView.setImageResource(android.R.drawable.presence_online)
             }
             3 -> {
+                p1Score1ImageView.setImageResource(android.R.drawable.presence_online)
+                p1Score2ImageView.setImageResource(android.R.drawable.presence_online)
                 p1Score3ImageView.setImageResource(android.R.drawable.presence_online)
             }
         }
@@ -415,9 +495,12 @@ class MainActivity : AppCompatActivity() {
                 p2Score1ImageView.setImageResource(android.R.drawable.presence_online)
             }
             2 -> {
+                p2Score1ImageView.setImageResource(android.R.drawable.presence_online)
                 p2Score2ImageView.setImageResource(android.R.drawable.presence_online)
             }
             3 -> {
+                p2Score1ImageView.setImageResource(android.R.drawable.presence_online)
+                p2Score2ImageView.setImageResource(android.R.drawable.presence_online)
                 p2Score3ImageView.setImageResource(android.R.drawable.presence_online)
             }
         }
