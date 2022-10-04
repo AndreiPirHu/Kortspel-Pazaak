@@ -239,7 +239,7 @@
         app:layout_constraintVertical_bias="0.232" />
 
     <TextView
-        android:id="@+id/player2MainNameTextVIew"
+        android:id="@+id/player2MainNameVIew"
         android:layout_width="21dp"
         android:layout_height="308dp"
         android:text="Player 2"
@@ -255,9 +255,9 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/player1MainNameTextView"
-        android:layout_width="25dp"
-        android:layout_height="312dp"
+        android:id="@+id/player1MainNameView"
+        android:layout_width="21dp"
+        android:layout_height="307dp"
         android:text="Player 1"
         android:textAlignment="center"
         android:textAllCaps="true"

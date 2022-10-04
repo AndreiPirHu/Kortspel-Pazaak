@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var p2CardEightImageView: ImageView
     lateinit var p2CardNineImageView: ImageView
 
+    //lateinit of the visible player names
+    lateinit var player1MainNameView: TextView
+    lateinit var player2MainNameView: TextView
+
     //lateinit of the visible total card value of the boar
     lateinit var p1BoardValueTextView: TextView
     lateinit var p2BoardValueTextView: TextView
@@ -187,6 +191,8 @@ class MainActivity : AppCompatActivity() {
         p2Score2ImageView = findViewById(R.id.p2Score2ImageView)
         p2Score3ImageView = findViewById(R.id.p2Score3ImageView)
 
+        player1MainNameView = findViewById(R.id.player1MainNameView)
+        player2MainNameView = findViewById(R.id.player2MainNameVIew)
 
         //player names fetched from the last activity if they have been submitted
         // chosen extra card values fetched and stored
@@ -212,6 +218,11 @@ class MainActivity : AppCompatActivity() {
 
         // player 2 end turn button is disabled since the game is played in turns
         p2EndTurnButton.setEnabled(false)
+
+        // set fetched player names
+        player1MainNameView.text = player1Name
+        player2MainNameView.text = player2Name
+
 
         //Checks the current score fetched from the winner activity
         scoreCheck()
@@ -298,69 +309,69 @@ class MainActivity : AppCompatActivity() {
         // Adds the used card value to the visible total card value
         p1ExtraCard1ImageButton.setOnClickListener {
             var playerValue = 1
+            p1ExtraCard1Used = true
             p1ExtraCard1Value = p1ChosenExtraCard1Value
             ExtraCardPressed(playerValue, p1ExtraCard1Value)
             p1ExtraCard1ImageButton.setEnabled(false)
             p1ExtraCard1ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
             calculateTotalValue()
             checkTotalValueIf20OrOver(playerValue)
-            p1ExtraCard1Used = true
             p1TurnCount++
 
         }
         p1ExtraCard2ImageButton.setOnClickListener {
             var playerValue = 1
+            p1ExtraCard2Used = true
             p1ExtraCard2Value = p1ChosenExtraCard2Value
             ExtraCardPressed(playerValue, p1ExtraCard2Value)
             p1ExtraCard2ImageButton.setEnabled(false)
             p1ExtraCard2ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
             calculateTotalValue()
             checkTotalValueIf20OrOver(playerValue)
-            p1ExtraCard2Used = true
             p1TurnCount++
         }
         p1ExtraCard3ImageButton.setOnClickListener {
             var playerValue = 1
+            p1ExtraCard3Used = true
             p1ExtraCard3Value = p1ChosenExtraCard3Value
             ExtraCardPressed(playerValue, p1ExtraCard3Value)
             p1ExtraCard3ImageButton.setEnabled(false)
             p1ExtraCard3ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
             calculateTotalValue()
             checkTotalValueIf20OrOver(playerValue)
-            p1ExtraCard3Used = true
             p1TurnCount++
         }
         p2ExtraCard1ImageButton.setOnClickListener {
             var playerValue = 2
+            p2ExtraCard1Used = true
             p2ExtraCard1Value = p2ChosenExtraCard1Value
             ExtraCardPressed(playerValue, p2ExtraCard1Value)
             p2ExtraCard1ImageButton.setEnabled(false)
             p2ExtraCard1ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
             calculateTotalValue()
             checkTotalValueIf20OrOver(playerValue)
-            p2ExtraCard1Used = true
             p2TurnCount++
         }
         p2ExtraCard2ImageButton.setOnClickListener {
             var playerValue = 2
+            p2ExtraCard2Used = true
             p2ExtraCard2Value = p2ChosenExtraCard2Value
             ExtraCardPressed(playerValue, p2ExtraCard2Value)
             p2ExtraCard2ImageButton.setEnabled(false)
             p2ExtraCard2ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
             calculateTotalValue()
             checkTotalValueIf20OrOver(playerValue)
-            p2ExtraCard2Used = true
             p2TurnCount++
         }
         p2ExtraCard3ImageButton.setOnClickListener {
             var playerValue = 2
+            p2ExtraCard3Used = true
             p2ExtraCard3Value = p2ChosenExtraCard3Value
             ExtraCardPressed(playerValue, p2ExtraCard3Value)
             p2ExtraCard3ImageButton.setEnabled(false)
             p2ExtraCard3ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
             calculateTotalValue()
             checkTotalValueIf20OrOver(playerValue)
-            p2ExtraCard3Used = true
             p2TurnCount++
         }
 
@@ -368,17 +379,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun checkIfPlayersStand(){
+        //checks if both players have pressed stand button
         if(p1Stand == true && p2Stand ==true)
-            if(p1TotalValue > p2TotalValue){
-                p1Score++
-                playerWinsRoundScreen(player1Name)
-            }else if(p2TotalValue > p1TotalValue){
-                p2Score++
-                playerWinsRoundScreen(player2Name)
-            }else if(p1TotalValue == p2TotalValue){
+            //win conditions if both player are under 20 and press stand
+            if(p1TotalValue <= 20 && p2TotalValue <= 20){
+                if(p1TotalValue > p2TotalValue){
+                    p1Score++
+                    playerWinsRoundScreen(player1Name)
+                }else if(p2TotalValue > p1TotalValue){
+                    p2Score++
+                    playerWinsRoundScreen(player2Name)
+                }else if(p1TotalValue == p2TotalValue){
+                    var tieNameInput = "No one"
+                    playerWinsRoundScreen(tieNameInput)
+                }
+                // checks if both players are over 20 when they press stand and gives out a tie
+            }else if(p1TotalValue > 20 && p2TotalValue > 20){
                 var tieNameInput = "No one"
                 playerWinsRoundScreen(tieNameInput)
+            }else if( p1TotalValue <= 20 && p2TotalValue > 20){
+                p1Score++
+                playerWinsRoundScreen(player1Name)
+            }else if( p1TotalValue > 20 && p2TotalValue <= 20){
+                p2Score++
+                playerWinsRoundScreen(player2Name)
             }
+
     }
 
     fun playerWinsRoundScreen(playerName: String){
@@ -525,7 +551,6 @@ class MainActivity : AppCompatActivity() {
         if(playerValue == 1){
             if (p1TotalValue > 20){
                 p1StandButton.setEnabled(false)
-
             }else{
                 p1StandButton.setEnabled(true)
             }
@@ -537,14 +562,13 @@ class MainActivity : AppCompatActivity() {
         if(playerValue == 2){
             if (p2TotalValue > 20){
                 p2StandButton.setEnabled(false)
-
-
             }else{
                 p2StandButton.setEnabled(true)
             }
             if(p2TotalValue ==20){
                 p2StandButton.callOnClick()
             }
+
         }
 
     }
@@ -558,6 +582,9 @@ class MainActivity : AppCompatActivity() {
             playerWinsRoundScreen(player2Name)
         } else if(p1TotalValue == 20 && p2TotalValue == 20){
             var tieNameInput = "No One"
+            playerWinsRoundScreen(tieNameInput)
+        }else if(p1TotalValue > 20 && p2TotalValue > 20){
+            var tieNameInput = "No one"
             playerWinsRoundScreen(tieNameInput)
         }
 
@@ -584,6 +611,12 @@ class MainActivity : AppCompatActivity() {
             p1ExtraCard2ImageButton.setEnabled(false)
             p1ExtraCard3ImageButton.setEnabled(false)
             p1StandButton.setEnabled(false)
+
+            // if one of the players is over 20 and has not pressed the stand button while the other ones has
+            // it gets activated again so they can end the round without using extra cards
+            if(p2TotalValue > 20 && p2Stand == false){
+                p2StandButton.setEnabled(true)
+            }
         } else if (playerValue == 2) {
             p2Stand = true
             p2EndTurnButton.setEnabled(false)
@@ -591,6 +624,13 @@ class MainActivity : AppCompatActivity() {
             p2ExtraCard2ImageButton.setEnabled(false)
             p2ExtraCard3ImageButton.setEnabled(false)
             p2StandButton.setEnabled(false)
+
+            // if one of the players is over 20 and has not pressed the stand button while the other ones has
+            // it gets activated again so they can end the round without using extra cards
+            if(p1TotalValue > 20 && p1Stand == false){
+                p1StandButton.setEnabled(true)
+            }
+
 
         }
 
