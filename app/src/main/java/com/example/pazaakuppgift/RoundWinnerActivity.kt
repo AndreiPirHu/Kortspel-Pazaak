@@ -72,14 +72,12 @@ class RoundWinnerActivity : AppCompatActivity() {
         winnerConstraintLayout = findViewById(R.id.winnerConstraintLayout)
 
 
-
         //Checks if there was a tie. Changes the background color
-        if(winnerName == "No one"){
+        if (winnerName == getString(R.string.no_one)) {
             winnerConstraintLayout.setBackgroundColor(129)
         }
         //Writes out the winners name on the screen
-        playerWinsRoundView.text = "$winnerName won this round!"
-
+        playerWinsRoundView.text = getString(R.string.won_this_round, winnerName)
 
 
     }
@@ -91,7 +89,7 @@ class RoundWinnerActivity : AppCompatActivity() {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         super.onTouchEvent(event)
         // if the player lifts their finger from the screen, the action is executed
-        if(event?.action == MotionEvent.ACTION_UP){
+        if (event?.action == MotionEvent.ACTION_UP) {
 
             // sends all the needed variables back to the main activity for the next round
             val intent = Intent(this, MainActivity::class.java)
@@ -106,19 +104,18 @@ class RoundWinnerActivity : AppCompatActivity() {
 
             intent.putExtra("player1Name", player1Name)
             intent.putExtra("player2Name", player2Name)
-            intent.putExtra("p1ChosenExtraCard1Value",p1ChosenExtraCard1Value)
-            intent.putExtra("p1ChosenExtraCard2Value",p1ChosenExtraCard2Value)
-            intent.putExtra("p1ChosenExtraCard3Value",p1ChosenExtraCard3Value)
-            intent.putExtra("p2ChosenExtraCard1Value",p2ChosenExtraCard1Value)
-            intent.putExtra("p2ChosenExtraCard2Value",p2ChosenExtraCard2Value)
-            intent.putExtra("p2ChosenExtraCard3Value",p2ChosenExtraCard3Value)
+            intent.putExtra("p1ChosenExtraCard1Value", p1ChosenExtraCard1Value)
+            intent.putExtra("p1ChosenExtraCard2Value", p1ChosenExtraCard2Value)
+            intent.putExtra("p1ChosenExtraCard3Value", p1ChosenExtraCard3Value)
+            intent.putExtra("p2ChosenExtraCard1Value", p2ChosenExtraCard1Value)
+            intent.putExtra("p2ChosenExtraCard2Value", p2ChosenExtraCard2Value)
+            intent.putExtra("p2ChosenExtraCard3Value", p2ChosenExtraCard3Value)
             startActivity(intent)
         }
 
 
         return true
     }
-
 
 
 }

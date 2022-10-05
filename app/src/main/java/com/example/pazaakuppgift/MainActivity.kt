@@ -2,6 +2,8 @@ package com.example.pazaakuppgift
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.content.res.ColorStateList
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -92,7 +94,6 @@ class MainActivity : AppCompatActivity() {
     var p2Round9Value = 0
 
 
-
     // variable for the chosen extra cards from hand building
     // needed to assign the images to hand before they are used
     var p1ChosenExtraCard1Value = 0
@@ -122,13 +123,12 @@ class MainActivity : AppCompatActivity() {
     var p2Stand = false
 
 
-
     //Default player names if none have been chosen
     var player1Name = "Player 1"
     var player2Name = "Player 2"
 
     //Name of the player who wins the round, variable gets passed on to the next activity
-    var winnerName= ""
+    var winnerName = ""
 
     //checks if the extra cards have been used or not
     var p1ExtraCard1Used = false
@@ -137,9 +137,6 @@ class MainActivity : AppCompatActivity() {
     var p2ExtraCard1Used = false
     var p2ExtraCard2Used = false
     var p2ExtraCard3Used = false
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -239,41 +236,41 @@ class MainActivity : AppCompatActivity() {
         // Turn counter goes up since turn ended
         p1EndTurnButton.setOnClickListener {
             var playerValue = 1
-            if(p1TotalValue < 20){
+            if (p1TotalValue < 20) {
                 EndTurnButtonPress(playerValue)
                 calculateTotalValue()
                 checkTotalValueIf20OrOver(playerValue)
                 p1TurnCount++
-            }else{
+            } else {
                 loseAndWinConditionCheck()
                 scoreCheck()
             }
             checkTotalValueIf20OrOver(playerValue)
             // ends the turn for current player and starts the other player's turn
             //unless the other player has already pressed stand or has over 20
-            if(p2TotalValue < 20 && p2Stand == false){
-               nextPlayerTurn(playerValue)
-            }else{
+            if (p2TotalValue < 20 && p2Stand == false) {
+                nextPlayerTurn(playerValue)
+            } else {
                 p1EndTurnButton.setEnabled(true)
             }
-
-
         }
         p2EndTurnButton.setOnClickListener {
             var playerValue = 2
-            if(p2TotalValue < 20) {
+            if (p2TotalValue < 20) {
                 EndTurnButtonPress(playerValue)
                 calculateTotalValue()
                 checkTotalValueIf20OrOver(playerValue)
                 p2TurnCount++
-            }else{
+            } else {
                 loseAndWinConditionCheck()
                 scoreCheck()
             }
-             checkTotalValueIf20OrOver(playerValue)
-            if(p1TotalValue < 20 && p1Stand == false){
+            checkTotalValueIf20OrOver(playerValue)
+            // ends the turn for current player and starts the other player's turn,
+            //unless the other player has already pressed stand or has over 20
+            if (p1TotalValue < 20 && p1Stand == false) {
                 nextPlayerTurn(playerValue)
-            }else{
+            } else {
                 p2EndTurnButton.setEnabled(true)
             }
 
@@ -286,17 +283,18 @@ class MainActivity : AppCompatActivity() {
             p1Stand = true
             standButtonPress(playerValue)
             checkIfPlayersStand()
-            if(p2TotalValue < 20 && p2Stand == false){
+            if (p2TotalValue < 20 && p2Stand == false) {
                 nextPlayerTurn(playerValue)
             }
 
         }
+        // Stand button that disables end turn button and waits for the other player to finish
         p2StandButton.setOnClickListener {
             var playerValue = 2
             p2Stand = true
             standButtonPress(playerValue)
             checkIfPlayersStand()
-            if(p1TotalValue < 20 && p1Stand == false ){
+            if (p1TotalValue < 20 && p1Stand == false) {
                 nextPlayerTurn(playerValue)
             }
 
@@ -378,47 +376,47 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun checkIfPlayersStand(){
+    fun checkIfPlayersStand() {
         //checks if both players have pressed stand button
-        if(p1Stand == true && p2Stand ==true)
-            //win conditions if both player are under 20 and press stand
-            if(p1TotalValue <= 20 && p2TotalValue <= 20){
-                if(p1TotalValue > p2TotalValue){
+        if (p1Stand == true && p2Stand == true)
+        //win conditions if both player are under 20 and press stand
+            if (p1TotalValue <= 20 && p2TotalValue <= 20) {
+                if (p1TotalValue > p2TotalValue) {
                     p1Score++
                     playerWinsRoundScreen(player1Name)
-                }else if(p2TotalValue > p1TotalValue){
+                } else if (p2TotalValue > p1TotalValue) {
                     p2Score++
                     playerWinsRoundScreen(player2Name)
-                }else if(p1TotalValue == p2TotalValue){
-                    var tieNameInput = "No one"
+                } else if (p1TotalValue == p2TotalValue) {
+                    var tieNameInput = getString(R.string.no_one)
                     playerWinsRoundScreen(tieNameInput)
                 }
                 // checks if both players are over 20 when they press stand and gives out a tie
-            }else if(p1TotalValue > 20 && p2TotalValue > 20){
-                var tieNameInput = "No one"
+            } else if (p1TotalValue > 20 && p2TotalValue > 20) {
+                var tieNameInput = getString(R.string.no_one)
                 playerWinsRoundScreen(tieNameInput)
-            }else if( p1TotalValue <= 20 && p2TotalValue > 20){
+            } else if (p1TotalValue <= 20 && p2TotalValue > 20) {
                 p1Score++
                 playerWinsRoundScreen(player1Name)
-            }else if( p1TotalValue > 20 && p2TotalValue <= 20){
+            } else if (p1TotalValue > 20 && p2TotalValue <= 20) {
                 p2Score++
                 playerWinsRoundScreen(player2Name)
             }
 
     }
 
-    fun playerWinsRoundScreen(playerName: String){
+    fun playerWinsRoundScreen(playerName: String) {
         winnerName = playerName
         val intent = Intent(this, RoundWinnerActivity::class.java)
         // old variables to keep check
         intent.putExtra("player1Name", player1Name)
         intent.putExtra("player2Name", player2Name)
-        intent.putExtra("p1ChosenExtraCard1Value",p1ChosenExtraCard1Value)
-        intent.putExtra("p1ChosenExtraCard2Value",p1ChosenExtraCard2Value)
-        intent.putExtra("p1ChosenExtraCard3Value",p1ChosenExtraCard3Value)
-        intent.putExtra("p2ChosenExtraCard1Value",p2ChosenExtraCard1Value)
-        intent.putExtra("p2ChosenExtraCard2Value",p2ChosenExtraCard2Value)
-        intent.putExtra("p2ChosenExtraCard3Value",p2ChosenExtraCard3Value)
+        intent.putExtra("p1ChosenExtraCard1Value", p1ChosenExtraCard1Value)
+        intent.putExtra("p1ChosenExtraCard2Value", p1ChosenExtraCard2Value)
+        intent.putExtra("p1ChosenExtraCard3Value", p1ChosenExtraCard3Value)
+        intent.putExtra("p2ChosenExtraCard1Value", p2ChosenExtraCard1Value)
+        intent.putExtra("p2ChosenExtraCard2Value", p2ChosenExtraCard2Value)
+        intent.putExtra("p2ChosenExtraCard3Value", p2ChosenExtraCard3Value)
         //New variables to keep check
         intent.putExtra("winnerName", winnerName)
         intent.putExtra("p1Score", p1Score)
@@ -433,34 +431,34 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-    fun checkIfExtraCardsUsed(){
-        if(p1ExtraCard1Used == true){
+    //checks if extra cards have been used and disables them + removes image
+    fun checkIfExtraCardsUsed() {
+        if (p1ExtraCard1Used == true) {
             p1ExtraCard1ImageButton.setEnabled(false)
             p1ExtraCard1ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
         }
 
-        if(p1ExtraCard2Used == true){
+        if (p1ExtraCard2Used == true) {
             p1ExtraCard2ImageButton.setEnabled(false)
             p1ExtraCard2ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
         }
 
-        if(p1ExtraCard3Used == true){
+        if (p1ExtraCard3Used == true) {
             p1ExtraCard3ImageButton.setEnabled(false)
             p1ExtraCard3ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
         }
 
-        if(p2ExtraCard1Used == true){
+        if (p2ExtraCard1Used == true) {
             p2ExtraCard1ImageButton.setEnabled(false)
             p2ExtraCard1ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
         }
 
-        if(p2ExtraCard2Used == true){
+        if (p2ExtraCard2Used == true) {
             p2ExtraCard2ImageButton.setEnabled(false)
             p2ExtraCard2ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
         }
 
-        if(p2ExtraCard3Used == true){
+        if (p2ExtraCard3Used == true) {
             p2ExtraCard3ImageButton.setEnabled(false)
             p2ExtraCard3ImageButton.setColorFilter(resources.getColor(androidx.appcompat.R.color.material_grey_50))
         }
@@ -469,30 +467,25 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun nextPlayerTurn(playerValue: Int){
+    fun nextPlayerTurn(playerValue: Int) {
         //Disables the current player's "End Turn" button and enables the second player's button
-        //if the total value one of the players is more than 20, buttons are not disabled since it can lock them out
-        if (playerValue == 1){
-            if (p2TotalValue < 20 && p2Stand == false){
+
+        if (playerValue == 1) {
+            if (p2TotalValue < 20 && p2Stand == false) {
                 p1EndTurnButton.setEnabled(false)
             }
             p2EndTurnButton.setEnabled(true)
-//            if(p2TotalValue== 20){
-//                p1EndTurnButton.setEnabled(true)
-//            }
-        }else if(playerValue == 2){
-            if (p1TotalValue < 20 && p1Stand == false){
+        } else if (playerValue == 2) {
+            //if the total value one of the players is more than 20, buttons are not disabled since it can lock them out
+            if (p1TotalValue < 20 && p1Stand == false) {
                 p2EndTurnButton.setEnabled(false)
-        }
+            }
             p1EndTurnButton.setEnabled(true)
-        // If one player has 20 points, the other player's button does not get disabled
-//        if (p1TotalValue == 20) {
-//            p2EndTurnButton.setEnabled(true)
-//        }
 
+        }
     }
-    }
-
+    //checks the current score and changes color of circle indicators
+    //if score is equal to 3, it starts game winner activity
     fun scoreCheck() {
         when (p1Score) {
 
@@ -543,29 +536,29 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun checkTotalValueIf20OrOver(playerValue: Int){
+    fun checkTotalValueIf20OrOver(playerValue: Int) {
         //Checks if the player's total value is over 20.
         //Stand button is deactivated
         //checks if player's total is 20, stand button is clicked
         // If the player ends his turn with the number over 20, he loses
-        if(playerValue == 1){
-            if (p1TotalValue > 20){
+        if (playerValue == 1) {
+            if (p1TotalValue > 20) {
                 p1StandButton.setEnabled(false)
-            }else{
+            } else {
                 p1StandButton.setEnabled(true)
             }
-            if(p1TotalValue == 20){
+            if (p1TotalValue == 20) {
                 p1StandButton.callOnClick()
             }
         }
 
-        if(playerValue == 2){
-            if (p2TotalValue > 20){
+        if (playerValue == 2) {
+            if (p2TotalValue > 20) {
                 p2StandButton.setEnabled(false)
-            }else{
+            } else {
                 p2StandButton.setEnabled(true)
             }
-            if(p2TotalValue ==20){
+            if (p2TotalValue == 20) {
                 p2StandButton.callOnClick()
             }
 
@@ -573,36 +566,52 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun loseAndWinConditionCheck(){
-        if(p1TotalValue <= 20 && p2TotalValue > 20){
+    //loss and win conditions in the game that are checked when cards are used, when turn is ended and when players stand
+    fun loseAndWinConditionCheck() {
+        if (p1TotalValue <= 20 && p2TotalValue > 20) {
             p1Score++
             playerWinsRoundScreen(player1Name)
-        }else if (p2TotalValue <= 20 && p1TotalValue > 20){
+        } else if (p2TotalValue <= 20 && p1TotalValue > 20) {
             p2Score++
             playerWinsRoundScreen(player2Name)
-        } else if(p1TotalValue == 20 && p2TotalValue == 20){
-            var tieNameInput = "No One"
+        } else if (p1TotalValue == 20 && p2TotalValue == 20) {
+            var tieNameInput = getString(R.string.no_one)
             playerWinsRoundScreen(tieNameInput)
-        }else if(p1TotalValue > 20 && p2TotalValue > 20){
-            var tieNameInput = "No one"
+        } else if (p1TotalValue > 20 && p2TotalValue > 20) {
+            var tieNameInput = getString(R.string.no_one)
             playerWinsRoundScreen(tieNameInput)
         }
 
-        
 
     }
 
     fun calculateTotalValue() {
         //Calculates the total value of cards on the board every time a card gets used
 
-        p1TotalValue = p1Round1Value + p1Round2Value + p1Round3Value + p1Round4Value + p1Round5Value + p1Round6Value + p1Round7Value + p1Round8Value + p1Round9Value + p1ExtraCard1Value + p1ExtraCard2Value + p1ExtraCard3Value
+
+        p1TotalValue =
+            p1Round1Value + p1Round2Value + p1Round3Value + p1Round4Value + p1Round5Value + p1Round6Value + p1Round7Value + p1Round8Value + p1Round9Value + p1ExtraCard1Value + p1ExtraCard2Value + p1ExtraCard3Value
         p1BoardValueTextView.text = p1TotalValue.toString()
 
-        p2TotalValue = p2Round1Value + p2Round2Value + p2Round3Value + p2Round4Value + p2Round5Value + p2Round6Value + p2Round7Value + p2Round8Value + p2Round9Value + p2ExtraCard1Value + p2ExtraCard2Value + p2ExtraCard3Value
+        p2TotalValue =
+            p2Round1Value + p2Round2Value + p2Round3Value + p2Round4Value + p2Round5Value + p2Round6Value + p2Round7Value + p2Round8Value + p2Round9Value + p2ExtraCard1Value + p2ExtraCard2Value + p2ExtraCard3Value
         p2BoardValueTextView.text = p2TotalValue.toString()
 
+        //changes total value color based on the value. 0ver 20 is red, under 20 is green
+        if (p1TotalValue > 20) {
+            p1BoardValueTextView.setTextColor(Color.rgb(200, 0, 0))
+        } else {
+            (p1BoardValueTextView.setTextColor(Color.rgb(0, 200, 0)))
+        }
+
+        if (p2TotalValue > 20) {
+            p2BoardValueTextView.setTextColor(Color.rgb(200, 0, 0))
+        } else {
+            (p2BoardValueTextView.setTextColor(Color.rgb(0, 200, 0)))
+        }
     }
 
+    //locks all the buttons if the player presses Stand
     fun standButtonPress(playerValue: Int) {
         if (playerValue == 1) {
             p1Stand = true
@@ -614,7 +623,7 @@ class MainActivity : AppCompatActivity() {
 
             // if one of the players is over 20 and has not pressed the stand button while the other ones has
             // it gets activated again so they can end the round without using extra cards
-            if(p2TotalValue > 20 && p2Stand == false){
+            if (p2TotalValue > 20 && p2Stand == false) {
                 p2StandButton.setEnabled(true)
             }
         } else if (playerValue == 2) {
@@ -627,7 +636,7 @@ class MainActivity : AppCompatActivity() {
 
             // if one of the players is over 20 and has not pressed the stand button while the other ones has
             // it gets activated again so they can end the round without using extra cards
-            if(p1TotalValue > 20 && p1Stand == false){
+            if (p1TotalValue > 20 && p1Stand == false) {
                 p1StandButton.setEnabled(true)
             }
 
@@ -636,42 +645,42 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
-
-    fun ExtraCardPressed(playerValue: Int, cardValue: Int){
+    //Sets the correct image resource on the right imageview depending on turn, player and extra card value
+    //unused code for card -5
+    fun ExtraCardPressed(playerValue: Int, cardValue: Int) {
         if (playerValue == 1) {
             when (p1TurnCount) {
 
                 1 -> {
                     when (cardValue) {
                         1 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardplus1)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardplus1)
                         }
                         2 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardplus2)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardplus2)
                         }
                         3 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardplus3)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardplus3)
                         }
                         4 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardplus4)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardplus4)
 
                         }
                         5 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardplus5)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardplus5)
                         }
                         -1 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardminus1)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardminus1)
                         }
                         -2 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardminus2)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardminus2)
                         }
                         -3 -> {
-                                p1CardOneImageView.setImageResource(R.drawable.extracardminus3)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardminus3)
                         }
                         -4 -> {
 
-                                p1CardOneImageView.setImageResource(R.drawable.extracardminus4)
+                            p1CardOneImageView.setImageResource(R.drawable.extracardminus4)
                         }
 //                      -5->{
 //                          p1CardOneImageView.setImageResource(R.drawable.extracardminus4)
@@ -1289,11 +1298,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    fun EndTurnButtonPress(playerValue: Int){
+    //Sets the correct image resource on the right imageview depending on turn, player and card value
+    fun EndTurnButtonPress(playerValue: Int) {
         var cardValue = (1..10).random()
 
-        if(playerValue == 1) {
+        if (playerValue == 1) {
             when (p1TurnCount) {
 
                 1 -> {
@@ -1626,7 +1635,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        if(playerValue == 2) {
+        if (playerValue == 2) {
             when (p2TurnCount) {
 
                 1 -> {
@@ -1960,185 +1969,184 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun assignExtraCardImages(){
+    fun assignExtraCardImages() {
         // assigning the extra card images based on the value of the ones picked in hand building activity
         // Player 1
 
-        when(p1ChosenExtraCard1Value){
-            1->{
+        when (p1ChosenExtraCard1Value) {
+            1 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p1ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus4)
             }
         }
-        when(p1ChosenExtraCard2Value){
-            1->{
+        when (p1ChosenExtraCard2Value) {
+            1 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p1ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus4)
             }
         }
-        when(p1ChosenExtraCard3Value){
-            1->{
+        when (p1ChosenExtraCard3Value) {
+            1 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p1ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus4)
             }
         }
 
 
-
         //Player 2
-        when(p2ChosenExtraCard1Value){
-            1->{
+        when (p2ChosenExtraCard1Value) {
+            1 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p2ExtraCard1ImageButton.setImageResource(R.drawable.extracardminus4)
             }
         }
-        when(p2ChosenExtraCard2Value){
-            1->{
+        when (p2ChosenExtraCard2Value) {
+            1 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p2ExtraCard2ImageButton.setImageResource(R.drawable.extracardminus4)
             }
         }
-        when(p2ChosenExtraCard3Value){
-            1->{
+        when (p2ChosenExtraCard3Value) {
+            1 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p2ExtraCard3ImageButton.setImageResource(R.drawable.extracardminus4)
             }
         }

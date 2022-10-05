@@ -13,24 +13,24 @@ import com.google.android.material.appbar.AppBarLayout
 
 class HandBuildingActivity : AppCompatActivity() {
     // lateinit of clickable extra cards
-     lateinit var p1AvailableExtraCard1ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard2ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard3ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard4ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard5ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard6ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard7ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard8ImageButton: ImageButton
-     lateinit var p1AvailableExtraCard9ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard1ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard2ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard3ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard4ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard5ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard6ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard7ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard8ImageButton: ImageButton
-     lateinit var p2AvailableExtraCard9ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard1ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard2ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard3ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard4ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard5ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard6ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard7ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard8ImageButton: ImageButton
+    lateinit var p1AvailableExtraCard9ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard1ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard2ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard3ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard4ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard5ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard6ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard7ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard8ImageButton: ImageButton
+    lateinit var p2AvailableExtraCard9ImageButton: ImageButton
 
     //     lateinit of the cards the players choose
     lateinit var p1ChosenExtraCard1ImageButton: ImageButton
@@ -104,7 +104,6 @@ class HandBuildingActivity : AppCompatActivity() {
         p2ChosenExtraCard3ImageButton = findViewById(R.id.p2ChosenExtraCard3ImageButton)
 
 
-
         //  clickable chosen extra cards. Disabled at the start because they have no chosen value
         p1ChosenExtraCard1ImageButton.setEnabled(false)
         p1ChosenExtraCard2ImageButton.setEnabled(false)
@@ -145,7 +144,7 @@ class HandBuildingActivity : AppCompatActivity() {
         //  button is disabled after being chosen
         //  changes the image resource to show it has been picked
         //  lastly checks if all extra cards have been chosen. If true, the ready button becomes available
-        p1AvailableExtraCard1ImageButton.setOnClickListener{
+        p1AvailableExtraCard1ImageButton.setOnClickListener {
             var chosenValue = 1
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -155,7 +154,7 @@ class HandBuildingActivity : AppCompatActivity() {
             checkIfCardsReady(playerValue)
 
         }
-        p1AvailableExtraCard2ImageButton.setOnClickListener{
+        p1AvailableExtraCard2ImageButton.setOnClickListener {
             var chosenValue = 2
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -164,7 +163,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p1AvailableExtraCard3ImageButton.setOnClickListener{
+        p1AvailableExtraCard3ImageButton.setOnClickListener {
             var chosenValue = 3
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -173,7 +172,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p1AvailableExtraCard4ImageButton.setOnClickListener{
+        p1AvailableExtraCard4ImageButton.setOnClickListener {
             var chosenValue = 4
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -182,7 +181,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard4ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p1AvailableExtraCard5ImageButton.setOnClickListener{
+        p1AvailableExtraCard5ImageButton.setOnClickListener {
             var chosenValue = 5
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -191,7 +190,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard5ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p1AvailableExtraCard6ImageButton.setOnClickListener{
+        p1AvailableExtraCard6ImageButton.setOnClickListener {
             var chosenValue = -1
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -200,7 +199,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard6ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p1AvailableExtraCard7ImageButton.setOnClickListener{
+        p1AvailableExtraCard7ImageButton.setOnClickListener {
             var chosenValue = -2
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -209,7 +208,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard7ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p1AvailableExtraCard8ImageButton.setOnClickListener{
+        p1AvailableExtraCard8ImageButton.setOnClickListener {
             var chosenValue = -3
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -218,7 +217,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard8ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p1AvailableExtraCard9ImageButton.setOnClickListener{
+        p1AvailableExtraCard9ImageButton.setOnClickListener {
             var chosenValue = -4
             var playerValue = 1
             chooseCardAsExtra(chosenValue, playerValue)
@@ -234,7 +233,7 @@ class HandBuildingActivity : AppCompatActivity() {
         //  button is disabled after being chosen
         //  changes the image resource to show it has been picked
         //  lastly checks if all extra cards have been chosen. If true, the ready button becomes available
-        p2AvailableExtraCard1ImageButton.setOnClickListener{
+        p2AvailableExtraCard1ImageButton.setOnClickListener {
             var chosenValue = 1
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -244,16 +243,16 @@ class HandBuildingActivity : AppCompatActivity() {
             checkIfCardsReady(playerValue)
 
         }
-        p2AvailableExtraCard2ImageButton.setOnClickListener{
+        p2AvailableExtraCard2ImageButton.setOnClickListener {
             var chosenValue = 2
             var playerValue = 2
-            chooseCardAsExtra(chosenValue,playerValue)
+            chooseCardAsExtra(chosenValue, playerValue)
             setCardImage()
             p2AvailableExtraCard2ImageButton.setEnabled(false)
             p2AvailableExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p2AvailableExtraCard3ImageButton.setOnClickListener{
+        p2AvailableExtraCard3ImageButton.setOnClickListener {
             var chosenValue = 3
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -262,7 +261,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p2AvailableExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p2AvailableExtraCard4ImageButton.setOnClickListener{
+        p2AvailableExtraCard4ImageButton.setOnClickListener {
             var chosenValue = 4
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -271,7 +270,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p2AvailableExtraCard4ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p2AvailableExtraCard5ImageButton.setOnClickListener{
+        p2AvailableExtraCard5ImageButton.setOnClickListener {
             var chosenValue = 5
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -280,7 +279,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p2AvailableExtraCard5ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p2AvailableExtraCard6ImageButton.setOnClickListener{
+        p2AvailableExtraCard6ImageButton.setOnClickListener {
             var chosenValue = -1
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -289,7 +288,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p2AvailableExtraCard6ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p2AvailableExtraCard7ImageButton.setOnClickListener{
+        p2AvailableExtraCard7ImageButton.setOnClickListener {
             var chosenValue = -2
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -298,7 +297,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p2AvailableExtraCard7ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p2AvailableExtraCard8ImageButton.setOnClickListener{
+        p2AvailableExtraCard8ImageButton.setOnClickListener {
             var chosenValue = -3
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -307,7 +306,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p2AvailableExtraCard8ImageButton.setImageResource(android.R.color.transparent)
             checkIfCardsReady(playerValue)
         }
-        p2AvailableExtraCard9ImageButton.setOnClickListener{
+        p2AvailableExtraCard9ImageButton.setOnClickListener {
             var chosenValue = -4
             var playerValue = 2
             chooseCardAsExtra(chosenValue, playerValue)
@@ -318,8 +317,6 @@ class HandBuildingActivity : AppCompatActivity() {
         }
 
 
-
-
         //  the chosen extra cards can be pressed to remove the chosen card in that spot
         //  the chosen extra card is enabled again
         //  the ready button is disabled again because the player doesnt have 3 cards
@@ -327,10 +324,10 @@ class HandBuildingActivity : AppCompatActivity() {
         //  uses the given value from the picked card to set it
         //  playerValue tells which player it belongs to
 
-        p1ChosenExtraCard1ImageButton.setOnClickListener{
+        p1ChosenExtraCard1ImageButton.setOnClickListener {
             var currentValue = p1ChosenExtraCard1Value
             var playerValue = 1
-            ReenableCards(playerValue, currentValue) 
+            ReenableCards(playerValue, currentValue)
             p1ChosenExtraCard1Value = 0
             setCardImage()
             checkIfCardsReady(playerValue)
@@ -338,7 +335,7 @@ class HandBuildingActivity : AppCompatActivity() {
 
         }
 
-        p1ChosenExtraCard2ImageButton.setOnClickListener{
+        p1ChosenExtraCard2ImageButton.setOnClickListener {
             var currentValue = p1ChosenExtraCard2Value
             var playerValue = 1
             ReenableCards(playerValue, currentValue)
@@ -349,7 +346,7 @@ class HandBuildingActivity : AppCompatActivity() {
 
         }
 
-        p1ChosenExtraCard3ImageButton.setOnClickListener{
+        p1ChosenExtraCard3ImageButton.setOnClickListener {
             var currentValue = p1ChosenExtraCard3Value
             var playerValue = 1
             ReenableCards(playerValue, currentValue)
@@ -360,7 +357,7 @@ class HandBuildingActivity : AppCompatActivity() {
 
         }
 
-        p2ChosenExtraCard1ImageButton.setOnClickListener{
+        p2ChosenExtraCard1ImageButton.setOnClickListener {
             var currentValue = p2ChosenExtraCard1Value
             var playerValue = 2
             ReenableCards(playerValue, currentValue)
@@ -371,7 +368,7 @@ class HandBuildingActivity : AppCompatActivity() {
 
         }
 
-        p2ChosenExtraCard2ImageButton.setOnClickListener{
+        p2ChosenExtraCard2ImageButton.setOnClickListener {
             var currentValue = p2ChosenExtraCard2Value
             var playerValue = 2
             ReenableCards(playerValue, currentValue)
@@ -382,7 +379,7 @@ class HandBuildingActivity : AppCompatActivity() {
 
         }
 
-        p2ChosenExtraCard3ImageButton.setOnClickListener{
+        p2ChosenExtraCard3ImageButton.setOnClickListener {
             var currentValue = p2ChosenExtraCard3Value
             var playerValue = 2
             ReenableCards(playerValue, currentValue)
@@ -400,101 +397,100 @@ class HandBuildingActivity : AppCompatActivity() {
     //  reenables cards if the card is removed from the chosen hand
     //  also reenables the image resource
     //  gets value from the removed card and also player value to know which player pressed
-    fun ReenableCards(playerValue: Int, currentValue: Int){
-        if (playerValue == 1){
-                  when(currentValue){
+    fun ReenableCards(playerValue: Int, currentValue: Int) {
+        if (playerValue == 1) {
+            when (currentValue) {
 
-                      1->{
-                          p1AvailableExtraCard1ImageButton.setEnabled(true)
-                          p1AvailableExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
-                      }
-                      2->{
-                          p1AvailableExtraCard2ImageButton.setEnabled(true)
-                          p1AvailableExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
-                      }
-                      3->{
-                          p1AvailableExtraCard3ImageButton.setEnabled(true)
-                          p1AvailableExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
-                      }
-                      4->{
-                          p1AvailableExtraCard4ImageButton.setEnabled(true)
-                          p1AvailableExtraCard4ImageButton.setImageResource(R.drawable.extracardplus4)
-                      }
-                      5->{
-                          p1AvailableExtraCard5ImageButton.setEnabled(true)
-                          p1AvailableExtraCard5ImageButton.setImageResource(R.drawable.extracardplus5)
-                      }
-                      -1->{
-                          p1AvailableExtraCard6ImageButton.setEnabled(true)
-                          p1AvailableExtraCard6ImageButton.setImageResource(R.drawable.extracardminus1)
-                      }
-                      -2->{
-                          p1AvailableExtraCard7ImageButton.setEnabled(true)
-                          p1AvailableExtraCard7ImageButton.setImageResource(R.drawable.extracardminus2)
-                      }
-                      -3->{
-                          p1AvailableExtraCard8ImageButton.setEnabled(true)
-                          p1AvailableExtraCard8ImageButton.setImageResource(R.drawable.extracardminus3)
-                      }
-                      -4->{
-                          p1AvailableExtraCard9ImageButton.setEnabled(true)
-                          p1AvailableExtraCard9ImageButton.setImageResource(R.drawable.extracardminus4)
-                      }
-                  }
-        }
-        
-        if (playerValue == 2){
-                  when(currentValue){
-
-                      1->{
-                          p2AvailableExtraCard1ImageButton.setEnabled(true)
-                          p2AvailableExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
-                      }
-                      2->{
-                          p2AvailableExtraCard2ImageButton.setEnabled(true)
-                          p2AvailableExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
-                      }
-                      3->{
-                          p2AvailableExtraCard3ImageButton.setEnabled(true)
-                          p2AvailableExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
-                      }
-                      4->{
-                          p2AvailableExtraCard4ImageButton.setEnabled(true)
-                          p2AvailableExtraCard4ImageButton.setImageResource(R.drawable.extracardplus4)
-                      }
-                      5->{
-                          p2AvailableExtraCard5ImageButton.setEnabled(true)
-                          p2AvailableExtraCard5ImageButton.setImageResource(R.drawable.extracardplus5)
-                      }
-                      -1->{
-                          p2AvailableExtraCard6ImageButton.setEnabled(true)
-                          p2AvailableExtraCard6ImageButton.setImageResource(R.drawable.extracardminus1)
-                      }
-                      -2->{
-                          p2AvailableExtraCard7ImageButton.setEnabled(true)
-                          p2AvailableExtraCard7ImageButton.setImageResource(R.drawable.extracardminus2)
-                      }
-                      -3->{
-                          p2AvailableExtraCard8ImageButton.setEnabled(true)
-                          p2AvailableExtraCard8ImageButton.setImageResource(R.drawable.extracardminus3)
-                      }
-                      -4->{
-                          p2AvailableExtraCard9ImageButton.setEnabled(true)
-                          p2AvailableExtraCard9ImageButton.setImageResource(R.drawable.extracardminus4)
-                      }
-                  }
+                1 -> {
+                    p1AvailableExtraCard1ImageButton.setEnabled(true)
+                    p1AvailableExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
+                }
+                2 -> {
+                    p1AvailableExtraCard2ImageButton.setEnabled(true)
+                    p1AvailableExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
+                }
+                3 -> {
+                    p1AvailableExtraCard3ImageButton.setEnabled(true)
+                    p1AvailableExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
+                }
+                4 -> {
+                    p1AvailableExtraCard4ImageButton.setEnabled(true)
+                    p1AvailableExtraCard4ImageButton.setImageResource(R.drawable.extracardplus4)
+                }
+                5 -> {
+                    p1AvailableExtraCard5ImageButton.setEnabled(true)
+                    p1AvailableExtraCard5ImageButton.setImageResource(R.drawable.extracardplus5)
+                }
+                -1 -> {
+                    p1AvailableExtraCard6ImageButton.setEnabled(true)
+                    p1AvailableExtraCard6ImageButton.setImageResource(R.drawable.extracardminus1)
+                }
+                -2 -> {
+                    p1AvailableExtraCard7ImageButton.setEnabled(true)
+                    p1AvailableExtraCard7ImageButton.setImageResource(R.drawable.extracardminus2)
+                }
+                -3 -> {
+                    p1AvailableExtraCard8ImageButton.setEnabled(true)
+                    p1AvailableExtraCard8ImageButton.setImageResource(R.drawable.extracardminus3)
+                }
+                -4 -> {
+                    p1AvailableExtraCard9ImageButton.setEnabled(true)
+                    p1AvailableExtraCard9ImageButton.setImageResource(R.drawable.extracardminus4)
+                }
+            }
         }
 
+        if (playerValue == 2) {
+            when (currentValue) {
 
+                1 -> {
+                    p2AvailableExtraCard1ImageButton.setEnabled(true)
+                    p2AvailableExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
+                }
+                2 -> {
+                    p2AvailableExtraCard2ImageButton.setEnabled(true)
+                    p2AvailableExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
+                }
+                3 -> {
+                    p2AvailableExtraCard3ImageButton.setEnabled(true)
+                    p2AvailableExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
+                }
+                4 -> {
+                    p2AvailableExtraCard4ImageButton.setEnabled(true)
+                    p2AvailableExtraCard4ImageButton.setImageResource(R.drawable.extracardplus4)
+                }
+                5 -> {
+                    p2AvailableExtraCard5ImageButton.setEnabled(true)
+                    p2AvailableExtraCard5ImageButton.setImageResource(R.drawable.extracardplus5)
+                }
+                -1 -> {
+                    p2AvailableExtraCard6ImageButton.setEnabled(true)
+                    p2AvailableExtraCard6ImageButton.setImageResource(R.drawable.extracardminus1)
+                }
+                -2 -> {
+                    p2AvailableExtraCard7ImageButton.setEnabled(true)
+                    p2AvailableExtraCard7ImageButton.setImageResource(R.drawable.extracardminus2)
+                }
+                -3 -> {
+                    p2AvailableExtraCard8ImageButton.setEnabled(true)
+                    p2AvailableExtraCard8ImageButton.setImageResource(R.drawable.extracardminus3)
+                }
+                -4 -> {
+                    p2AvailableExtraCard9ImageButton.setEnabled(true)
+                    p2AvailableExtraCard9ImageButton.setImageResource(R.drawable.extracardminus4)
+                }
+            }
+        }
 
 
     }
+
     //  checks if all 3 cards have been picked for the players hand.
     //  takes in playerValue to know which hand to check and to know which ready button to enable
     //  also disables ready button if card has been removed from hand
-    fun checkIfCardsReady(playerValue: Int){
+    fun checkIfCardsReady(playerValue: Int) {
 
-        if(playerValue == 1) {
+        if (playerValue == 1) {
             if (p1ChosenExtraCard1Value != 0 && p1ChosenExtraCard2Value != 0 && p1ChosenExtraCard3Value != 0) {
                 p1HandBuildingReadyButton.setEnabled(true)
                 lockCards(playerValue)
@@ -502,7 +498,7 @@ class HandBuildingActivity : AppCompatActivity() {
                 p1HandBuildingReadyButton.setEnabled(false)
                 unlockCards(playerValue)
             }
-        }else if(playerValue == 2) {
+        } else if (playerValue == 2) {
             if (p2ChosenExtraCard1Value != 0 && p2ChosenExtraCard2Value != 0 && p2ChosenExtraCard3Value != 0) {
                 p2HandBuildingReadyButton.setEnabled(true)
                 lockCards(playerValue)
@@ -515,8 +511,8 @@ class HandBuildingActivity : AppCompatActivity() {
 
     //function to lock all cards if 3 have already been chosen
 
-    fun lockCards(playerValue:Int){
-        if (playerValue == 1){
+    fun lockCards(playerValue: Int) {
+        if (playerValue == 1) {
             p1AvailableExtraCard1ImageButton.setEnabled(false)
             p1AvailableExtraCard2ImageButton.setEnabled(false)
             p1AvailableExtraCard3ImageButton.setEnabled(false)
@@ -526,7 +522,7 @@ class HandBuildingActivity : AppCompatActivity() {
             p1AvailableExtraCard7ImageButton.setEnabled(false)
             p1AvailableExtraCard8ImageButton.setEnabled(false)
             p1AvailableExtraCard9ImageButton.setEnabled(false)
-        }else if(playerValue == 2){
+        } else if (playerValue == 2) {
             p2AvailableExtraCard1ImageButton.setEnabled(false)
             p2AvailableExtraCard2ImageButton.setEnabled(false)
             p2AvailableExtraCard3ImageButton.setEnabled(false)
@@ -544,95 +540,95 @@ class HandBuildingActivity : AppCompatActivity() {
     //Function to unlock cards if one card in hand gets unpicked
     // Checks value of other cards in hand to not reenable an already picked card
 
-    fun unlockCards(playerValue: Int){
-        if(playerValue == 1){
+    fun unlockCards(playerValue: Int) {
+        if (playerValue == 1) {
 
-            if(p1ChosenExtraCard1Value !=1 && p2ChosenExtraCard2Value !=1 && p1ChosenExtraCard3Value != 1){
+            if (p1ChosenExtraCard1Value != 1 && p2ChosenExtraCard2Value != 1 && p1ChosenExtraCard3Value != 1) {
                 p1AvailableExtraCard1ImageButton.setEnabled(true)
             }
-            if (p1ChosenExtraCard1Value !=2 && p1ChosenExtraCard2Value !=2 && p1ChosenExtraCard3Value != 2){
+            if (p1ChosenExtraCard1Value != 2 && p1ChosenExtraCard2Value != 2 && p1ChosenExtraCard3Value != 2) {
                 p1AvailableExtraCard2ImageButton.setEnabled(true)
             }
-            if (p1ChosenExtraCard1Value !=3 && p1ChosenExtraCard2Value !=3 && p1ChosenExtraCard3Value != 3){
+            if (p1ChosenExtraCard1Value != 3 && p1ChosenExtraCard2Value != 3 && p1ChosenExtraCard3Value != 3) {
                 p1AvailableExtraCard3ImageButton.setEnabled(true)
             }
-            if (p1ChosenExtraCard1Value !=4 && p1ChosenExtraCard2Value !=4 && p1ChosenExtraCard3Value != 4){
+            if (p1ChosenExtraCard1Value != 4 && p1ChosenExtraCard2Value != 4 && p1ChosenExtraCard3Value != 4) {
                 p1AvailableExtraCard4ImageButton.setEnabled(true)
             }
-            if (p1ChosenExtraCard1Value !=5 && p1ChosenExtraCard2Value !=5 && p1ChosenExtraCard3Value != 5) {
+            if (p1ChosenExtraCard1Value != 5 && p1ChosenExtraCard2Value != 5 && p1ChosenExtraCard3Value != 5) {
                 p1AvailableExtraCard5ImageButton.setEnabled(true)
             }
-            if  (p1ChosenExtraCard1Value !=-1 && p1ChosenExtraCard2Value !=-1 && p1ChosenExtraCard3Value != -1){
+            if (p1ChosenExtraCard1Value != -1 && p1ChosenExtraCard2Value != -1 && p1ChosenExtraCard3Value != -1) {
                 p1AvailableExtraCard6ImageButton.setEnabled(true)
             }
-            if  (p1ChosenExtraCard1Value !=-2 && p1ChosenExtraCard2Value !=-2 && p1ChosenExtraCard3Value != -2){
+            if (p1ChosenExtraCard1Value != -2 && p1ChosenExtraCard2Value != -2 && p1ChosenExtraCard3Value != -2) {
                 p1AvailableExtraCard7ImageButton.setEnabled(true)
             }
-            if  (p1ChosenExtraCard1Value !=-3 && p1ChosenExtraCard2Value !=-3 && p1ChosenExtraCard3Value != -3){
+            if (p1ChosenExtraCard1Value != -3 && p1ChosenExtraCard2Value != -3 && p1ChosenExtraCard3Value != -3) {
                 p1AvailableExtraCard8ImageButton.setEnabled(true)
             }
-            if  (p1ChosenExtraCard1Value !=-4 && p1ChosenExtraCard2Value !=-4 && p1ChosenExtraCard3Value != -4){
+            if (p1ChosenExtraCard1Value != -4 && p1ChosenExtraCard2Value != -4 && p1ChosenExtraCard3Value != -4) {
                 p1AvailableExtraCard9ImageButton.setEnabled(true)
             }
         }
-        if(playerValue == 2){
+        if (playerValue == 2) {
 
 
-            if(p2ChosenExtraCard1Value !=1 && p2ChosenExtraCard2Value !=1 && p2ChosenExtraCard3Value != 1){
-                    p2AvailableExtraCard1ImageButton.setEnabled(true)
+            if (p2ChosenExtraCard1Value != 1 && p2ChosenExtraCard2Value != 1 && p2ChosenExtraCard3Value != 1) {
+                p2AvailableExtraCard1ImageButton.setEnabled(true)
             }
-            if (p2ChosenExtraCard1Value !=2 && p2ChosenExtraCard2Value !=2 && p2ChosenExtraCard3Value != 2){
-                    p2AvailableExtraCard2ImageButton.setEnabled(true)
-                }
-            if (p2ChosenExtraCard1Value !=3 && p2ChosenExtraCard2Value !=3 && p2ChosenExtraCard3Value != 3){
-                    p2AvailableExtraCard3ImageButton.setEnabled(true)
-                }
-            if (p2ChosenExtraCard1Value !=4 && p2ChosenExtraCard2Value !=4 && p2ChosenExtraCard3Value != 4){
-                    p2AvailableExtraCard4ImageButton.setEnabled(true)
-                }
-            if (p2ChosenExtraCard1Value !=5 && p2ChosenExtraCard2Value !=5 && p2ChosenExtraCard3Value != 5) {
-                    p2AvailableExtraCard5ImageButton.setEnabled(true)
-                }
-            if  (p2ChosenExtraCard1Value !=-1 && p2ChosenExtraCard2Value !=-1 && p2ChosenExtraCard3Value != -1){
-                    p2AvailableExtraCard6ImageButton.setEnabled(true)
-                }
-            if  (p2ChosenExtraCard1Value !=-2 && p2ChosenExtraCard2Value !=-2 && p2ChosenExtraCard3Value != -2){
-                    p2AvailableExtraCard7ImageButton.setEnabled(true)
-                }
-            if  (p2ChosenExtraCard1Value !=-3 && p2ChosenExtraCard2Value !=-3 && p2ChosenExtraCard3Value != -3){
-                    p2AvailableExtraCard8ImageButton.setEnabled(true)
-                }
-            if  (p2ChosenExtraCard1Value !=-4 && p2ChosenExtraCard2Value !=-4 && p2ChosenExtraCard3Value != -4){
-                    p2AvailableExtraCard9ImageButton.setEnabled(true)
-                }
+            if (p2ChosenExtraCard1Value != 2 && p2ChosenExtraCard2Value != 2 && p2ChosenExtraCard3Value != 2) {
+                p2AvailableExtraCard2ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value != 3 && p2ChosenExtraCard2Value != 3 && p2ChosenExtraCard3Value != 3) {
+                p2AvailableExtraCard3ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value != 4 && p2ChosenExtraCard2Value != 4 && p2ChosenExtraCard3Value != 4) {
+                p2AvailableExtraCard4ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value != 5 && p2ChosenExtraCard2Value != 5 && p2ChosenExtraCard3Value != 5) {
+                p2AvailableExtraCard5ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value != -1 && p2ChosenExtraCard2Value != -1 && p2ChosenExtraCard3Value != -1) {
+                p2AvailableExtraCard6ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value != -2 && p2ChosenExtraCard2Value != -2 && p2ChosenExtraCard3Value != -2) {
+                p2AvailableExtraCard7ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value != -3 && p2ChosenExtraCard2Value != -3 && p2ChosenExtraCard3Value != -3) {
+                p2AvailableExtraCard8ImageButton.setEnabled(true)
+            }
+            if (p2ChosenExtraCard1Value != -4 && p2ChosenExtraCard2Value != -4 && p2ChosenExtraCard3Value != -4) {
+                p2AvailableExtraCard9ImageButton.setEnabled(true)
+            }
         }
 
     }
-
 
 
     //  checks if both players have pressed the ready button
     //  if both players are ready then it initiates the next activity
     //  sends the chosen player names and the chosen extra cards to the next activity
-    fun checkReadyToStart(){
-        if(player1Ready == true && player2Ready == true){
+    fun checkReadyToStart() {
+        if (player1Ready == true && player2Ready == true) {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("player1Name", player1Name)
             intent.putExtra("player2Name", player2Name)
-            intent.putExtra("p1ChosenExtraCard1Value",p1ChosenExtraCard1Value)
-            intent.putExtra("p1ChosenExtraCard2Value",p1ChosenExtraCard2Value)
-            intent.putExtra("p1ChosenExtraCard3Value",p1ChosenExtraCard3Value)
-            intent.putExtra("p2ChosenExtraCard1Value",p2ChosenExtraCard1Value)
-            intent.putExtra("p2ChosenExtraCard2Value",p2ChosenExtraCard2Value)
-            intent.putExtra("p2ChosenExtraCard3Value",p2ChosenExtraCard3Value)
+            intent.putExtra("p1ChosenExtraCard1Value", p1ChosenExtraCard1Value)
+            intent.putExtra("p1ChosenExtraCard2Value", p1ChosenExtraCard2Value)
+            intent.putExtra("p1ChosenExtraCard3Value", p1ChosenExtraCard3Value)
+            intent.putExtra("p2ChosenExtraCard1Value", p2ChosenExtraCard1Value)
+            intent.putExtra("p2ChosenExtraCard2Value", p2ChosenExtraCard2Value)
+            intent.putExtra("p2ChosenExtraCard3Value", p2ChosenExtraCard3Value)
             startActivity(intent)
         }
     }
+
     //  gives the cards in the hand value based on the ones chosen from the board
     //  takes in cardValue to know the chosen value for the card
     // takes in playerValue to know which player chose it
-    fun chooseCardAsExtra(cardValue: Int,playerValue: Int) {
-        if(playerValue== 1) {
+    fun chooseCardAsExtra(cardValue: Int, playerValue: Int) {
+        if (playerValue == 1) {
             if (p1ChosenExtraCard1Value == 0) {
                 p1ChosenExtraCard1Value = cardValue
                 p1ChosenExtraCard1ImageButton.setEnabled(true)
@@ -643,7 +639,7 @@ class HandBuildingActivity : AppCompatActivity() {
                 p1ChosenExtraCard3Value = cardValue
                 p1ChosenExtraCard3ImageButton.setEnabled(true)
             }
-        }else if(playerValue== 2) {
+        } else if (playerValue == 2) {
             if (p2ChosenExtraCard1Value == 0) {
                 p2ChosenExtraCard1Value = cardValue
                 p2ChosenExtraCard1ImageButton.setEnabled(true)
@@ -658,213 +654,213 @@ class HandBuildingActivity : AppCompatActivity() {
     }
 
     //  assigns an image to the cards in the players' hands based on the ones picked from the board
-    fun setCardImage(){
-        when (p1ChosenExtraCard1Value){
+    fun setCardImage() {
+        when (p1ChosenExtraCard1Value) {
 
-            0->{
+            0 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(android.R.color.transparent)
             }
 
-            1->{
+            1 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p1ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
 
-        when (p1ChosenExtraCard2Value){
+        when (p1ChosenExtraCard2Value) {
 
-            0->{
+            0 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             }
-            1->{
+            1 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p1ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
 
-        when (p1ChosenExtraCard3Value){
+        when (p1ChosenExtraCard3Value) {
 
-            0->{
+            0 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             }
-            1->{
+            1 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p1ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
 
-        when (p2ChosenExtraCard1Value){
+        when (p2ChosenExtraCard1Value) {
 
-            0->{
+            0 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(android.R.color.transparent)
             }
-            1->{
+            1 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p2ChosenExtraCard1ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
 
-        when (p2ChosenExtraCard2Value){
+        when (p2ChosenExtraCard2Value) {
 
-            0->{
+            0 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(android.R.color.transparent)
             }
-            1->{
+            1 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p2ChosenExtraCard2ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 
         }
 
-        when (p2ChosenExtraCard3Value){
+        when (p2ChosenExtraCard3Value) {
 
-            0->{
+            0 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(android.R.color.transparent)
             }
-            1->{
+            1 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus1)
             }
-            2->{
+            2 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus2)
             }
-            3->{
+            3 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus3)
             }
-            4->{
+            4 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus4)
             }
-            5->{
+            5 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardplus5)
             }
-            -1->{
+            -1 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus1)
             }
-            -2->{
+            -2 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus2)
             }
-            -3->{
+            -3 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus3)
             }
-            -4->{
+            -4 -> {
                 p2ChosenExtraCard3ImageButton.setImageResource(R.drawable.extracardminus4)
             }
 

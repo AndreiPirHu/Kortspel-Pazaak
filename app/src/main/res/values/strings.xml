@@ -1,3 +1,33 @@
 <resources>
     <string name="app_name">PazaakUppgift</string>
+
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="player1_name_hint">Player 1 name</string>
+    <string name="player2_name_hint">Player 2 name</string>
+    <string name="submit">Submit</string>
+    <string name="change">change</string>
+    <string name="play">Play</string>
+    <string name="rules">Rules</string>
+    <string name="ready">Ready</string>
+    <string name="score">Score</string>
+    <string name="end_turn">End Turn</string>
+    <string name="stand">Stand</string>
+    <string name="no_one">No one</string>
+    <string name="won_this_round">%1$s won this round!</string>
+    <string name="null_">null</string>
+    <string name="congratulations">Congratulations %1$s! \n You are the winner of the game!</string>
+    <string name="rematch">Rematch</string>
+    <string name="return_to_main_menu">Return to Main Menu</string>
+
+
+
+    <string name="rules_text">
+        "\u2022 Spelet går ut på att spelarna varje rond får ett slumpmässigt kort på sin bräda som är från 1-10. Spelarnas mål är att komma så nära 20 som möjligt utan att gå över. \n"
+        "\u2022 Den som lyckas komma närmast vinner omgången vilket ger ett poäng till den spelaren. \n"
+        "\u2022 Spelaren som kommer till 3 poäng först vinner spelet. \n"
+        "\u2022 De kort som står under "Your Hand" är extrakort som spelaren kan använda under sin rond och som kan hjälpa till att nå målet. \n"
+        "\u2022 Om en spelare råkar komma över 20 och inte kan få ner summan under 20 igen med hjälp av extrakort så förlorar denne automatiskt omgången ifall den andra spelaren slutar under 20. \n"
+        "\u2022 Spelaren kan trycka på "Stand” när denne känner sig säker med sin bräda och då får denne vänta på att motståndaren blir klar. Inga fler kort från handen kan läggas då. \n"
+    </string>
 </resources>

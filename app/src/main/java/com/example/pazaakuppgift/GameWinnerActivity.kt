@@ -14,7 +14,6 @@ class GameWinnerActivity : AppCompatActivity() {
     lateinit var returnToMainMenuButton: Button
 
 
-
     //Default player names if none have been chosen
     var player1Name = "Player 1"
     var player2Name = "Player 2"
@@ -40,9 +39,7 @@ class GameWinnerActivity : AppCompatActivity() {
         player2Name = intent.getStringExtra("player2Name").toString()
 
 
-        gameWinnerView.text =   "Congratulations $winnerName!" +
-                                System.getProperty("line.separator") +
-                                "You are the winner of the game!"
+        gameWinnerView.text =  getString(R.string.congratulations,winnerName)
 
         //takes the players back to hand building activity with the same names
         rematchButton.setOnClickListener {
@@ -59,8 +56,6 @@ class GameWinnerActivity : AppCompatActivity() {
         }
 
     }
-
-
 
 
 }
