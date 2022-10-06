@@ -8,8 +8,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="645dp"
-        android:layout_height="312dp"
+        android:layout_width="777dp"
+        android:layout_height="348dp"
+        android:lineSpacingExtra="1sp"
         android:text="@string/rules_text"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
@@ -18,8 +19,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.197" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

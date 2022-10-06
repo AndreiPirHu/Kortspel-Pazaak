@@ -23,11 +23,11 @@
 
 
     <string name="rules_text">
-        "\u2022 Spelet går ut på att spelarna varje rond får ett slumpmässigt kort på sin bräda som är från 1-10. Spelarnas mål är att komma så nära 20 som möjligt utan att gå över. \n"
-        "\u2022 Den som lyckas komma närmast vinner omgången vilket ger ett poäng till den spelaren. \n"
-        "\u2022 Spelaren som kommer till 3 poäng först vinner spelet. \n"
-        "\u2022 De kort som står under "Your Hand" är extrakort som spelaren kan använda under sin rond och som kan hjälpa till att nå målet. \n"
-        "\u2022 Om en spelare råkar komma över 20 och inte kan få ner summan under 20 igen med hjälp av extrakort så förlorar denne automatiskt omgången ifall den andra spelaren slutar under 20. \n"
+        "\u2022 Spelet går ut på att spelarna varje rond får ett slumpmässigt kort på sin bräda som är från 1-10. Spelarnas mål är att komma så nära 20 som möjligt utan att gå över. \n\n"
+        "\u2022 Den som lyckas komma närmast vinner omgången vilket ger ett poäng till den spelaren. \n\n"
+        "\u2022 Spelaren som kommer till 3 poäng först vinner spelet. \n\n"
+        "\u2022 De kort som står under "Your Hand" är extrakort som spelaren kan använda under sin rond och som kan hjälpa till att nå målet. \n\n"
+        "\u2022 Om en spelare råkar komma över 20 och inte kan få ner summan under 20 igen med hjälp av extrakort så förlorar denne automatiskt omgången ifall den andra spelaren slutar under 20. \n\n"
         "\u2022 Spelaren kan trycka på "Stand” när denne känner sig säker med sin bräda och då får denne vänta på att motståndaren blir klar. Inga fler kort från handen kan läggas då. \n"
     </string>
 </resources>
